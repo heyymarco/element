@@ -1,5 +1,5 @@
 {
-  "name": "@heymarco/web-element",
+  "name": "@heymarco/element",
   "version": "1.0.0",
   "description": "a base class for manipulating common HTML element",
   "main": "index.js",
@@ -22,10 +22,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/heyymarco/web-element.git"
+    "url": "git+https://github.com/heyymarco/element.git"
   },
   "bugs": {
-    "url": "https://github.com/heyymarco/web-element/issues"
+    "url": "https://github.com/heyymarco/element/issues"
   },
-  "homepage": "https://github.com/heyymarco/web-element#readme"
+  "homepage": "https://github.com/heyymarco/element#readme"
 }
