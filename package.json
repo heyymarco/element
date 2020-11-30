@@ -1,5 +1,5 @@
 {
-  "name": "@heymarco/element",
+  "name": "@heymarco/web-element",
   "version": "1.0.0",
   "description": "a base class for manipulating common HTML element",
   "main": "index.js",
