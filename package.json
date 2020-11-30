@@ -1,0 +1,31 @@
+{
+  "name": "@heymarco/element",
+  "version": "1.0.0",
+  "description": "a base class for manipulating common HTML element",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "html",
+    "element",
+    "manipulation",
+    "dom"
+  ],
+  "author": "HeyMarco",
+  "license": "ISC",
+  "dependencies": {
+    "jquery-wrapper-class": "^1.0.9"
+  },
+  "devDependencies": {
+    "typescript": "^4.1.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/heyymarco/web-element.git"
+  },
+  "bugs": {
+    "url": "https://github.com/heyymarco/web-element/issues"
+  },
+  "homepage": "https://github.com/heyymarco/web-element#readme"
+}
