@@ -1,6 +1,6 @@
 {
   "name": "@heymarco/element",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "a base class for manipulating common HTML element",
   "main": "index.js",
   "scripts": {
@@ -15,11 +15,9 @@
   "author": "HeyMarco",
   "license": "ISC",
   "dependencies": {
-    "jquery-wrapper-class": "^1.0.9"
+    "jquery-wrapper-class": "^1.0.10"
   },
-  "devDependencies": {
-    "typescript": "^4.1.2"
-  },
+  "devDependencies": {},
   "repository": {
     "type": "git",
     "url": "git+https://github.com/heyymarco/element.git"
