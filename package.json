@@ -1,6 +1,6 @@
 {
   "name": "@heymarco/element",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "a base class for manipulating common HTML element",
   "main": "index.js",
   "scripts": {
@@ -15,7 +15,7 @@
   "author": "HeyMarco",
   "license": "ISC",
   "dependencies": {
-    "jquery-wrapper-class": "^1.0.10"
+    "jquery-wrapper-class": "^1.0.12"
   },
   "devDependencies": {},
   "repository": {
