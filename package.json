@@ -1,7 +1,7 @@
 {
   "name": "@heymarco/element",
-  "version": "1.0.3",
-  "description": "a base class for manipulating common HTML element",
+  "version": "1.0.4",
+  "description": "A base class for manipulating common HTML element",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,7 +15,7 @@
   "author": "HeyMarco",
   "license": "ISC",
   "dependencies": {
-    "jquery-wrapper-class": "^1.0.12"
+    "jquery-wrapper-class": "^1.0.13"
   },
   "devDependencies": {},
   "repository": {
