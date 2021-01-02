@@ -15,6 +15,13 @@
   "author": "HeyMarco",
   "license": "ISC",
   "dependencies": {
+    "@heymarco/border": "^1.0.7",
+    "@heymarco/colors": "^1.0.11",
+    "@heymarco/sass-class-template": "^1.0.6",
+    "@heymarco/sass-selector": "^1.0.5",
+    "@heymarco/sass-string": "^1.0.1",
+    "@heymarco/spacer": "^1.0.6",
+    "@heymarco/typography": "^1.0.10",
     "jquery-wrapper-class": "^1.0.13"
   },
   "devDependencies": {},

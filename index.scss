@@ -1,0 +1,380 @@
+// A base class of control element.
+
+
+
+// development:
+@use "node_modules/@heymarco/sass-class-template/index" as *;
+@use "node_modules/@heymarco/sass-selector/index" as selector;
+@use "node_modules/@heymarco/border/index" as border;
+@use "node_modules/@heymarco/spacer/index" as spacer;
+@use "node_modules/@heymarco/typography/index" as typo;
+@use "node_modules/@heymarco/colors/index" as color;
+@use "node_modules/@heymarco/sass-string/index" as string;
+
+// production:
+// @use "../../../node_modules/@heymarco/sass-class-template/index" as *;
+// @use "../../../node_modules/@heymarco/sass-selector/index" as selector;
+// @use "../../../node_modules/@heymarco/border/index" as border;
+// @use "../../../node_modules/@heymarco/spacer/index" as spacer;
+// @use "../../../node_modules/@heymarco/typography/index" as typo;
+// @use "../../../node_modules/@heymarco/colors/index" as color;
+// @use "../../../node_modules/@heymarco/sass-string/index" as string;
+
+
+
+@use "sass:meta" as meta;
+
+
+
+$alias              : ".element"                            !default;
+$class              : ""                                    !default;
+$var-root           : ":root"                               !default;
+$var-prefix         : "elm"                                 !default;
+$var-prefix-base    : ""                                    !default;
+$cssvar: make-cssvar($var-prefix, $var-prefix-base);
+$anim-prefix: part-combine($var-prefix, "anim-");
+
+$backg              : transparent                           !default;
+$backg-gradient     : linear-gradient(180deg, rgba(color.$white, 0.15), rgba(color.$white, 0)) border-box !default;
+$color              : contrast                              !default;
+
+$font-size          : var(#{typo.$cssvar}font-size-default) !default;
+$font-size-sm       : calc((var(#{typo.$cssvar}font-size-nm) + var(#{typo.$cssvar}font-size-sm)) / 2) !default;
+$font-size-lg       : var(#{typo.$cssvar}font-size-md)      !default;
+$font-family        : unset                                 !default;
+$font-weight        : unset                                 !default;
+$font-style         : unset                                 !default;
+$text-decoration    : unset                                 !default;
+$lineheight         : unset                                 !default;
+
+$padding-x          : calc((var(#{spacer.$cssvar}sm) + var(#{spacer.$cssvar}md)) / 2) !default;
+$padding-y          : calc((var(#{spacer.$cssvar}xs) + var(#{spacer.$cssvar}sm)) / 2) !default;
+$padding-x-sm       : var(#{spacer.$cssvar}sm)              !default;
+$padding-y-sm       : var(#{spacer.$cssvar}xs)              !default;
+$padding-x-lg       : var(#{spacer.$cssvar}md)              !default;
+$padding-y-lg       : var(#{spacer.$cssvar}sm)              !default;
+
+$border             : var(#{border.$cssvar}default) var(#{border.$cssvar}style) var(#{border.$cssvar}color) !default;
+$border-radius      : var(#{border.$radius-cssvar}default)  !default;
+$border-radius-sm   : var(#{border.$radius-cssvar}sm)       !default;
+$border-radius-lg   : var(#{border.$radius-cssvar}lg)       !default;
+
+$filter             : brightness(100%)                      !default;
+$filter-hover       : brightness(80%) contrast(150%)        !default;
+
+$anim               : #{$anim-prefix}none                  !default;
+$anim-hover         : 150ms ease-out both #{$anim-prefix}hover  !default;
+$anim-leave         : 300ms ease-out both #{$anim-prefix}leave  !default;
+
+
+
+@include declare-cssvar($var-root) {
+    // background:
+    $_backg-has-color           : false;
+    @if (meta.type-of($backg) == color) {
+        $_backg-has-color       : true;
+
+        #{$cssvar}backg-h       : color.hue($backg);
+        #{$cssvar}backg-s       : color.saturation($backg);
+        #{$cssvar}backg-l       : color.lightness($backg);
+        #{$cssvar}backg-a       : color.alpha($backg);
+        #{$cssvar}backg         : hsla(var(#{$cssvar}backg-h), var(#{$cssvar}backg-s), var(#{$cssvar}backg-l), var(#{$cssvar}backg-a));
+    }
+    @else {
+        #{$cssvar}backg         : $backg;
+    }
+
+    #{$cssvar}backg-gradient    : $backg-gradient;
+
+    // color:
+    @if (($color == contrast) and $_backg-has-color) {
+        #{$cssvar}color-h       : var(#{$cssvar}backg-h);
+        #{$cssvar}color-s       : var(#{$cssvar}backg-s);
+        #{$cssvar}color-l       : string.unquote("clamp(0%, (var(#{$cssvar}backg-l) - var(#{color.$cssvar}contrast-threshold)) * -1000, 100%)");
+        #{$cssvar}color-a       : 100%;
+        #{$cssvar}color         : hsla(var(#{$cssvar}color-h), var(#{$cssvar}color-s), var(#{$cssvar}color-l), var(#{$cssvar}color-a));
+    }
+    @else if (meta.type-of($color) == color) {
+        #{$cssvar}color-h       : color.hue($color);
+        #{$cssvar}color-s       : color.saturation($color);
+        #{$cssvar}color-l       : color.lightness($color);
+        #{$cssvar}color-a       : color.alpha($color);
+        #{$cssvar}color         : hsla(var(#{$cssvar}color-h), var(#{$cssvar}color-s), var(#{$cssvar}color-l), var(#{$cssvar}color-a));
+    }
+    @else {
+        #{$cssvar}color         : $color;
+    }
+
+    #{$cssvar}font-size         : $font-size;
+    #{$cssvar}font-size-sm      : $font-size-sm;
+    #{$cssvar}font-size-lg      : $font-size-lg;
+    #{$cssvar}font-family       : $font-family;
+    #{$cssvar}font-weight       : $font-weight;
+    #{$cssvar}font-style        : $font-style;
+    #{$cssvar}text-decoration   : $text-decoration;
+    #{$cssvar}lineheight        : $lineheight;
+
+    #{$cssvar}padding-x         : $padding-x;
+    #{$cssvar}padding-y         : $padding-y;
+    #{$cssvar}padding-x-sm      : $padding-x-sm;
+    #{$cssvar}padding-y-sm      : $padding-y-sm;
+    #{$cssvar}padding-x-lg      : $padding-x-lg;
+    #{$cssvar}padding-y-lg      : $padding-y-lg;
+    
+    #{$cssvar}border            : $border;
+    #{$cssvar}border-radius     : $border-radius;
+    #{$cssvar}border-radius-sm  : $border-radius-sm;
+    #{$cssvar}border-radius-lg  : $border-radius-lg;
+
+    #{$cssvar}filter            : $filter;
+    #{$cssvar}filter-hover      : $filter-hover;
+
+    #{$cssvar}anim              : $anim;
+    #{$cssvar}anim-hover        : $anim-hover;
+    #{$cssvar}anim-leave        : $anim-leave;
+
+
+
+    // variant-theme: background, color, border:
+    @each $theme-name, $theme-color in color.$themes {
+        // background:
+        #{$cssvar}backg-#{$theme-name}-h        : color.hue($theme-color);
+        #{$cssvar}backg-#{$theme-name}-s        : color.saturation($theme-color);
+        #{$cssvar}backg-#{$theme-name}-l        : color.lightness($theme-color);
+        #{$cssvar}backg-#{$theme-name}-a        : color.alpha($theme-color);
+        #{$cssvar}backg-#{$theme-name}          : hsla(var(#{$cssvar}backg-#{$theme-name}-h), var(#{$cssvar}backg-#{$theme-name}-s), var(#{$cssvar}backg-#{$theme-name}-l), var(#{$cssvar}backg-#{$theme-name}-a));
+
+        
+        // color:
+        @if (($color == contrast)) {
+
+            /*
+                https://css-tricks.com/converting-color-spaces-in-javascript/
+
+                c = (1 - Math.abs(2 * l - 1)) * s
+                x = c * (1 - Math.abs(((h / 60%) % 2) - 1))
+                m = l - c/2
+
+
+
+                c = (1 -  abs(2 * l - 1) ) * s
+                c = (1 - [abs(2 * l - 1)]) * s
+                c = (1 - [(2 * l - 1) * clamp(-1, (2 * l - 1) * 999, 1)]) * s
+                --------------------------------------------------------------
+
+
+                x = c * (1 -  abs(((h / 60%) % 2) - 1))
+                x = c * (1 -  abs(((h % 120%) / 60) - 1))
+
+                d = h % 120%
+                d = h - (clamp(0, ((h - 120) * 999) + 1, 1) + clamp(0, ((h - 240) * 999) + 1, 1) + clamp(0, ((h - 360) * 999) + 1, 1)) * 120
+                ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+                x = c * (1 -  abs((d / 60) - 1))
+                x = c * (1 -    [((d / 60) - 1) * clamp(-1, ((d / 60) - 1) * 999, 1)])
+                -----------------------------------------------------------------------
+
+                m = l - c / 2
+                -------------
+
+
+
+                
+                     if (300 <= h && h < 360) {         clamp(0, ((h - 300) * 999) + 1, 1)  *   clamp(0, (360 - h) * 999, 1)
+                    r = c; g = 0; b = x;
+                }
+                else if (0 <= h   && h < 60)  {         clamp(0, ((h - 0) * 999) + 1, 1)    *   clamp(0, (60 - h) * 999, 1)
+                    r = c; g = x; b = 0;
+                }
+
+                else if (60 <= h  && h < 120) {         clamp(0, ((h - 60) * 999) + 1, 1)   *   clamp(0, (120 - h) * 999, 1)
+                    r = x; g = c; b = 0;
+                }
+                else if (120 <= h && h < 180) {         clamp(0, ((h - 120) * 999) + 1, 1)  *   clamp(0, (180 - h) * 999, 1)
+                    r = 0; g = c; b = x;
+                }
+
+                else if (180 <= h && h < 240) {         clamp(0, ((h - 180) * 999) + 1, 1)  *   clamp(0, (240 - h) * 999, 1)
+                    r = 0; g = x; b = c;
+                }
+                else if (240 <= h && h < 300) {         clamp(0, ((h - 240) * 999) + 1, 1)  *   clamp(0, (300 - h) * 999, 1)
+                    r = x; g = 0; b = c;
+                }
+
+
+                r = m
+                    +
+                    (c * clamp(0, clamp(0, ((h - 300) * 999) + 1, 1) * clamp(0, (360 - h) * 999, 1) + clamp(0, ((h - 0) * 999) + 1, 1) * clamp(0, (60 - h) * 999, 1), 1))
+                    +
+                    (x * clamp(0, clamp(0, ((h - 60) * 999) + 1, 1) * clamp(0, (120 - h) * 999, 1) + clamp(0, ((h - 240) * 999) + 1, 1) * clamp(0, (300 - h) * 999, 1), 1))
+                
+                g = m
+                    +
+                    (c * clamp(0, clamp(0, ((h - 60) * 999) + 1, 1) * clamp(0, (120 - h) * 999, 1) + clamp(0, ((h - 120) * 999) + 1, 1) * clamp(0, (180 - h) * 999, 1), 1))
+                    +
+                    (x * clamp(0, clamp(0, ((h - 0) * 999) + 1, 1) * clamp(0, (60 - h) * 999, 1) + clamp(0, ((h - 180) * 999) + 1, 1) * clamp(0, (240 - h) * 999, 1), 1))
+                
+                b = m
+                    +
+                    (c * clamp(0, clamp(0, ((h - 180) * 999) + 1, 1) * clamp(0, (240 - h) * 999, 1) + clamp(0, ((h - 240) * 999) + 1, 1) * clamp(0, (300 - h) * 999, 1), 1))
+                    +
+                    (x * clamp(0, clamp(0, ((h - 300) * 999) + 1, 1) * clamp(0, (360 - h) * 999, 1) + clamp(0, ((h - 120) * 999) + 1, 1) * clamp(0, (180 - h) * 999, 1), 1))
+
+            */
+            /*
+                c: (1 - ((2*l - 1)*clamp(-1,(2*l - 1)*999,1)))*s;
+                d: h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120;
+
+                x: c*(1 - (((d/60) - 1)*clamp(-1,((d/60) - 1)*999,1)));
+                (with d) x: c*(1 - ((((h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120)/60) - 1)*clamp(-1,(((h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120)/60) - 1)*999,1)));
+
+                m: l - c/2;
+                r: (m + (c*clamp(0,clamp(0,((h - 300)*999) + 1,1)*clamp(0,(360 - h)*999,1) + clamp(0,((h - 0)*999) + 1,1)*clamp(0,(60 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 60)*999) + 1,1)*clamp(0,(120 - h)*999,1) + clamp(0,((h - 240)*999) + 1,1)*clamp(0,(300 - h)*999,1),1)))*255;
+                g: (m + (c*clamp(0,clamp(0,((h - 60)*999) + 1,1)*clamp(0,(120 - h)*999,1) + clamp(0,((h - 120)*999) + 1,1)*clamp(0,(180 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 0)*999) + 1,1)*clamp(0,(60 - h)*999,1) + clamp(0,((h - 180)*999) + 1,1)*clamp(0,(240 - h)*999,1),1)))*255;
+                b: (m + (c*clamp(0,clamp(0,((h - 180)*999) + 1,1)*clamp(0,(240 - h)*999,1) + clamp(0,((h - 240)*999) + 1,1)*clamp(0,(300 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 300)*999) + 1,1)*clamp(0,(360 - h)*999,1) + clamp(0,((h - 120)*999) + 1,1)*clamp(0,(180 - h)*999,1),1)))*255;
+            */
+            /*
+                
+                #{$cssvar}backg-#{$theme-name}-c: string.unquote("calc((1 - ((2*var(#{$cssvar}backg-#{$theme-name}-l) - 1)*clamp(-1,(2*var(#{$cssvar}backg-#{$theme-name}-l) - 1)*999,1)))*var(#{$cssvar}backg-#{$theme-name}-s))");
+                #{$cssvar}backg-#{$theme-name}-x: string.unquote("calc(var(#{$cssvar}backg-#{$theme-name}-c)*(1 - ((((var(#{$cssvar}backg-#{$theme-name}-h) - (clamp(0,((var(#{$cssvar}backg-#{$theme-name}-h) - 120)*999) + 1,1) + clamp(0,((var(#{$cssvar}backg-#{$theme-name}-h) - 240)*999) + 1,1) + clamp(0,((var(#{$cssvar}backg-#{$theme-name}-h) - 360)*999) + 1,1))*120)/60) - 1)*clamp(-1,(((var(#{$cssvar}backg-#{$theme-name}-h) - (clamp(0,((var(#{$cssvar}backg-#{$theme-name}-h) - 120)*999) + 1,1) + clamp(0,((var(#{$cssvar}backg-#{$theme-name}-h) - 240)*999) + 1,1) + clamp(0,((var(#{$cssvar}backg-#{$theme-name}-h) - 360)*999) + 1,1))*120)/60) - 1)*999,1))))");
+
+                #{$cssvar}backg-#{$theme-name}-r: string.unquote("calc(((var(#{$cssvar}backg-#{$theme-name}-l) - var(#{$cssvar}backg-#{$theme-name}-c)/2) + (var(#{$cssvar}backg-#{$theme-name}-c)*clamp(0,clamp(0,((var(#{$cssvar}backg-#{$theme-name}-h) - 300)*999) + 1,1)*clamp(0,(360 - var(#{$cssvar}backg-#{$theme-name}-h))*999,1) + clamp(0,((var(#{$cssvar}backg-#{$theme-name}-h) - 0)*999) + 1,1)*clamp(0,(60 - var(#{$cssvar}backg-#{$theme-name}-h))*999,1),1)) + (var(#{$cssvar}backg-#{$theme-name}-x)*clamp(0,clamp(0,((var(#{$cssvar}backg-#{$theme-name}-h) - 60)*999) + 1,1)*clamp(0,(120 - var(#{$cssvar}backg-#{$theme-name}-h))*999,1) + clamp(0,((var(#{$cssvar}backg-#{$theme-name}-h) - 240)*999) + 1,1)*clamp(0,(300 - var(#{$cssvar}backg-#{$theme-name}-h))*999,1),1)))*255)");
+                #{$cssvar}backg-#{$theme-name}-g: string.unquote("calc(((var(#{$cssvar}backg-#{$theme-name}-l) - var(#{$cssvar}backg-#{$theme-name}-c)/2) + (var(#{$cssvar}backg-#{$theme-name}-c)*clamp(0,clamp(0,((var(#{$cssvar}backg-#{$theme-name}-h) - 60)*999) + 1,1)*clamp(0,(120 - var(#{$cssvar}backg-#{$theme-name}-h))*999,1) + clamp(0,((var(#{$cssvar}backg-#{$theme-name}-h) - 120)*999) + 1,1)*clamp(0,(180 - var(#{$cssvar}backg-#{$theme-name}-h))*999,1),1)) + (var(#{$cssvar}backg-#{$theme-name}-x)*clamp(0,clamp(0,((var(#{$cssvar}backg-#{$theme-name}-h) - 0)*999) + 1,1)*clamp(0,(60 - var(#{$cssvar}backg-#{$theme-name}-h))*999,1) + clamp(0,((var(#{$cssvar}backg-#{$theme-name}-h) - 180)*999) + 1,1)*clamp(0,(240 - var(#{$cssvar}backg-#{$theme-name}-h))*999,1),1)))*255)");
+                #{$cssvar}backg-#{$theme-name}-b: string.unquote("calc(((var(#{$cssvar}backg-#{$theme-name}-l) - var(#{$cssvar}backg-#{$theme-name}-c)/2) + (var(#{$cssvar}backg-#{$theme-name}-c)*clamp(0,clamp(0,((var(#{$cssvar}backg-#{$theme-name}-h) - 180)*999) + 1,1)*clamp(0,(240 - var(#{$cssvar}backg-#{$theme-name}-h))*999,1) + clamp(0,((var(#{$cssvar}backg-#{$theme-name}-h) - 240)*999) + 1,1)*clamp(0,(300 - var(#{$cssvar}backg-#{$theme-name}-h))*999,1),1)) + (var(#{$cssvar}backg-#{$theme-name}-x)*clamp(0,clamp(0,((var(#{$cssvar}backg-#{$theme-name}-h) - 300)*999) + 1,1)*clamp(0,(360 - var(#{$cssvar}backg-#{$theme-name}-h))*999,1) + clamp(0,((var(#{$cssvar}backg-#{$theme-name}-h) - 120)*999) + 1,1)*clamp(0,(180 - var(#{$cssvar}backg-#{$theme-name}-h))*999,1),1)))*255)");
+                
+            */
+
+            
+            #{$cssvar}color-#{$theme-name}-h    : var(#{$cssvar}backg-#{$theme-name}-h);
+            #{$cssvar}color-#{$theme-name}-s    : var(#{$cssvar}backg-#{$theme-name}-s);
+            #{$cssvar}color-#{$theme-name}-x    : string.unquote("var(#{$cssvar}backg-#{$theme-name}-l) + (clamp(0, ((var(#{$cssvar}backg-#{$theme-name}-l) - 0.5) * 1000) + 1, 1) * var(#{$cssvar}backg-#{$theme-name}-s)) + (var(#{$cssvar}backg-#{$theme-name}-l) * var(#{$cssvar}backg-#{$theme-name}-s) * clamp(-1, ((var(#{$cssvar}backg-#{$theme-name}-l) - 0.5) * -1000) - 1, 1))");
+            #{$cssvar}color-#{$theme-name}-l    : string.unquote("clamp(0%, (var(#{$cssvar}backg-#{$theme-name}-l) - var(#{color.$cssvar}contrast-threshold)) * -1000, 100%)");
+            #{$cssvar}color-#{$theme-name}-a    : 100%;
+            #{$cssvar}color-#{$theme-name}      : hsla(var(#{$cssvar}color-#{$theme-name}-h), var(#{$cssvar}color-#{$theme-name}-s), var(#{$cssvar}color-#{$theme-name}-l), var(#{$cssvar}color-#{$theme-name}-a));
+        }
+        @else if (meta.type-of($color) == color) {
+            #{$cssvar}color-#{$theme-name}-h    : var(#{$cssvar}color-h);
+            #{$cssvar}color-#{$theme-name}-s    : var(#{$cssvar}color-s);
+            #{$cssvar}color-#{$theme-name}-l    : var(#{$cssvar}color-l);
+            #{$cssvar}color-#{$theme-name}-a    : var(#{$cssvar}color-a);
+    
+            #{$cssvar}color-#{$theme-name}      : hsla(var(#{$cssvar}color-#{$theme-name}-h), var(#{$cssvar}color-#{$theme-name}-s), var(#{$cssvar}color-#{$theme-name}-l), var(#{$cssvar}color-#{$theme-name}-a));
+        }
+        @else {
+            #{$cssvar}color-#{$theme-name}      : var(#{$cssvar}color);
+        }
+    }
+}
+
+
+
+/* begin: animations */
+@keyframes #{$anim-prefix}none { }
+
+@keyframes #{$anim-prefix}hover {
+    0% {
+        filter          : var(#{$cssvar}filter);
+    }
+
+    100% {
+        filter          : var(#{$cssvar}filter) var(#{$cssvar}filter-hover);
+    }
+}
+
+@keyframes #{$anim-prefix}leave {
+    0% {
+        filter          : var(#{$cssvar}filter) var(#{$cssvar}filter-hover);
+    }
+
+    100% {
+        filter          : var(#{$cssvar}filter);
+    }
+}
+/* end: animations */
+
+
+
+/* begin: general style */
+@mixin _style($include) {
+    // @if ($include) { @include  base.style; }
+    // @else          { @extend #{base.$alias} !optional; }
+
+
+
+    background      : var(#{$cssvar}backg-gradient), var(#{$cssvar}backg);
+    color           : var(#{$cssvar}color);
+
+    font-size       : var(#{$cssvar}font-size);
+    font-family     : var(#{$cssvar}font-family);
+    font-weight     : var(#{$cssvar}font-weight);
+    font-style      : var(#{$cssvar}font-style);
+    text-decoration : var(#{$cssvar}text-decoration);
+    line-height     : var(#{$cssvar}lineheight);
+
+    padding-left    : var(#{$cssvar}padding-x);
+    padding-right   : var(#{$cssvar}padding-x);
+    padding-top     : var(#{$cssvar}padding-y);
+    padding-bottom  : var(#{$cssvar}padding-y);
+
+    border          : var(#{$cssvar}border);
+    border-radius   : var(#{$cssvar}border-radius);
+
+    filter          : var(#{$cssvar}filter);
+
+    #{$cssvar}anim-hover-leave  : none;
+    animation       : var(#{$cssvar}anim), var(#{$cssvar}anim-hover-leave);
+
+
+    
+    /* begin: variant-size: font-size, padding, border-radius */
+    @each $size in (sm, lg) { @include selector.append("." + $size) {
+        font-size       : var(#{$cssvar}font-size-#{$size});
+
+        padding-left    : var(#{$cssvar}padding-x-#{$size});
+        padding-right   : var(#{$cssvar}padding-x-#{$size});
+        padding-top     : var(#{$cssvar}padding-y-#{$size});
+        padding-bottom  : var(#{$cssvar}padding-y-#{$size});
+
+        border-radius   : var(#{$cssvar}border-radius-#{$size});
+    }}
+    /* end: variant-size: font-size, padding, border-radius */
+
+
+    
+    /* begin: variant-theme: background, color, border */
+    @each $theme-name, $theme-color in color.$themes { @include selector.append("." + $theme-name) {
+        #{$cssvar}backg-h       : var(#{$cssvar}backg-#{$theme-name}-h);
+        #{$cssvar}backg-s       : var(#{$cssvar}backg-#{$theme-name}-s);
+        #{$cssvar}backg-l       : var(#{$cssvar}backg-#{$theme-name}-l);
+        #{$cssvar}backg-a       : var(#{$cssvar}backg-#{$theme-name}-a);
+        #{$cssvar}backg         : var(#{$cssvar}backg-#{$theme-name});
+
+        #{$cssvar}color-h       : var(#{$cssvar}color-#{$theme-name}-h);
+        #{$cssvar}color-s       : var(#{$cssvar}color-#{$theme-name}-s);
+        #{$cssvar}color-l       : var(#{$cssvar}color-#{$theme-name}-l);
+        #{$cssvar}color-a       : var(#{$cssvar}color-#{$theme-name}-a);
+        #{$cssvar}color         : hsla(var(#{$cssvar}color-h), var(#{$cssvar}color-s), var(#{$cssvar}color-l), var(#{$cssvar}color-a));
+    }}
+    /* end: variant-theme: background, color, border */
+
+
+
+    /* begin: variant-state: animation */
+    $_state-hover: ":hover, :focus";
+    $_state-leave: ".leave, .blur";
+    @include selector.append(    $_state-hover) {                                           #{$cssvar}anim-hover-leave: var(#{$cssvar}anim-hover);    }
+    @include selector.append-not($_state-hover) { @include selector.append($_state-leave) { #{$cssvar}anim-hover-leave: var(#{$cssvar}anim-leave);   }}
+    /* end: variant-state: animation */
+}
+@mixin style {
+    @include _style(true);
+}
+@include alias($alias) {
+    @include _style(false);
+}
+/* end: general style */
+
+
+
+// abstract class => no emit class
+@include class($alias, $class, "");

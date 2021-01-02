@@ -1,0 +1,1769 @@
+:root {
+  --col-blue:#0d6efd;
+  --col-indigo:#6610f2;
+  --col-purple:#6f42c1;
+  --col-pink:#d63384;
+  --col-red:#dc3545;
+  --col-orange:#fd7e14;
+  --col-yellow:#ffc107;
+  --col-green:#198754;
+  --col-teal:#20c997;
+  --col-cyan:#0dcaf0;
+  --col-black:#000000;
+  --col-white:#ffffff;
+  --col-gray:#6c757d;
+  --col-gray-dark:#343a40;
+  --col-blue-transp:rgba(13, 110, 253, 0.25);
+  --col-indigo-transp:rgba(102, 16, 242, 0.25);
+  --col-purple-transp:rgba(111, 66, 193, 0.25);
+  --col-pink-transp:rgba(214, 51, 132, 0.25);
+  --col-red-transp:rgba(220, 53, 69, 0.25);
+  --col-orange-transp:rgba(253, 126, 20, 0.25);
+  --col-yellow-transp:rgba(255, 193, 7, 0.25);
+  --col-green-transp:rgba(25, 135, 84, 0.25);
+  --col-teal-transp:rgba(32, 201, 151, 0.25);
+  --col-cyan-transp:rgba(13, 202, 240, 0.25);
+  --col-black-transp:rgba(0, 0, 0, 0.25);
+  --col-white-transp:rgba(255, 255, 255, 0.25);
+  --col-gray-transp:rgba(108, 117, 125, 0.25);
+  --col-gray-dark-transp:rgba(52, 58, 64, 0.25);
+  --col-primary:#0d6efd;
+  --col-secondary:#6c757d;
+  --col-success:#198754;
+  --col-info:#0dcaf0;
+  --col-warning:#ffc107;
+  --col-danger:#dc3545;
+  --col-light:#f8f9fa;
+  --col-dark:#212529;
+  --col-primary-transp:rgba(13, 110, 253, 0.25);
+  --col-secondary-transp:rgba(108, 117, 125, 0.25);
+  --col-success-transp:rgba(25, 135, 84, 0.25);
+  --col-info-transp:rgba(13, 202, 240, 0.25);
+  --col-warning-transp:rgba(255, 193, 7, 0.25);
+  --col-danger-transp:rgba(220, 53, 69, 0.25);
+  --col-light-transp:rgba(248, 249, 250, 0.25);
+  --col-dark-transp:rgba(33, 37, 41, 0.25);
+  --col-contrast-threshold: 46.47%;
+}
+
+/* begin: specialized style */
+/* end: specialized style */
+/* begin: general style */
+/* end: general style */
+/* define variables here */
+/* begin: general style */
+/* end: general style */
+/*sub*/
+:root {
+  --bd-color:var(--col-dark-transp);
+  --bd-style:solid;
+  --bd:var(--bd-default);
+  --bd-default:var(--bd-hair);
+  --bd-none:0px;
+  --bd-hair:1px;
+  --bd-thin:2px;
+  --bd-bold:4px;
+}
+
+/* begin: public mixins */
+/* end: public mixins */
+/* begin: division class */
+/* end: division class */
+/* begin: general style */
+/* end: general style */
+/*sub*/
+:root {
+  --bd-radius:var(--bd-radius-default);
+  --bd-radius-default:var(--bd-radius-md);
+  --bd-radius-none:0px;
+  --bd-radius-sm:0.2rem;
+  --bd-radius-md:0.25rem;
+  --bd-radius-lg:0.3rem;
+  --bd-radius-pill:50rem;
+  --bd-radius-circle:50%;
+}
+
+/* begin: public mixins */
+/* end: public mixins */
+/* begin: division class */
+/* end: division class */
+/* begin: general style */
+/* end: general style */
+:root {
+  --spc:var(--spc-default);
+  --spc-default:var(--spc-md);
+  --spc-none:0px;
+  --spc-xs:calc(var(--spc-md) / 4);
+  --spc-sm:calc(var(--spc-md) / 2);
+  --spc-md:1rem;
+  --spc-lg:calc(var(--spc-md) / 1.5);
+  --spc-xl:calc(var(--spc-md) / 3);
+}
+
+/* define variables here */
+/* begin: general style */
+/* end: general style */
+:root {
+  --font-size:var(--font-size-default);
+  --font-size-default:var(--font-size-nm);
+  --font-size-xs:calc(var(--font-size-nm) * 0.50);
+  --font-size-sm:calc(var(--font-size-nm) * 0.75);
+  --font-size-nm:1rem;
+  --font-size-md:calc(var(--font-size-nm) * 1.25);
+  --font-size-lg:calc(var(--font-size-nm) * 1.50);
+  --font-size-xl:calc(var(--font-size-nm) * 1.75);
+  --font-size-xxl:calc(var(--font-size-nm) * 2.00);
+  --font-size-xxxl:calc(var(--font-size-nm) * 2.25);
+  --font-family:var(--font-family-default);
+  --font-family-default:var(--font-family-sans-serif);
+  --font-family-sans-serif:system-ui, -apple-system, Segoe UI, Roboto, Helvetica Neue, Arial, Noto Sans, Liberation Sans, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
+  --font-family-monospace:SFMono-Regular, Menlo, Monaco, Consolas, Liberation Mono, Courier New, monospace;
+  --font-weight:var(--font-weight-default);
+  --font-weight-default:var(--font-weight-normal);
+  --font-weight-lighter:lighter;
+  --font-weight-light:300;
+  --font-weight-normal:400;
+  --font-weight-bold:700;
+  --font-weight-bolder:bolder;
+  --font-style:unset;
+  --text-decoration:unset;
+  --lineheight:var(--lineheight-default);
+  --lineheight-default:var(--lineheight-nm);
+  --lineheight-sm:1.25;
+  --lineheight-nm:1.5;
+  --lineheight-lg:2;
+  --color:var(--col-dark);
+  --backg:var(--col-white);
+}
+
+/* begin: general style */
+:root {
+  font-size: var(--font-size-default);
+  font-family: var(--font-family-default);
+  font-weight: var(--font-weight-default);
+  font-style: var(--font-style);
+  text-decoration: var(--text-decoration);
+  line-height: var(--lineheight-default);
+  color: var(--color);
+  background: var(--backg);
+}
+
+/* end: general style */
+:root {
+  --second-font-size:unset;
+  --second-font-family:unset;
+  --second-font-weight:unset;
+  --second-font-style:unset;
+  --second-text-decoration:unset;
+  --second-lineheight:unset;
+  --second-color:unset;
+  --second-opacity:0.63;
+}
+
+/* begin: general style */
+small, .secondary {
+  font-size: var(--second-font-size);
+  font-family: var(--second-font-family);
+  font-weight: var(--second-font-weight);
+  font-style: var(--second-font-style);
+  text-decoration: var(--second-text-decoration);
+  line-height: var(--second-lineheight);
+  color: var(--second-color);
+  opacity: var(--second-opacity);
+}
+
+/* end: general style */
+:root {
+  --h-font-size-6:calc(1.00 * var(--font-size-default));
+  --h-font-size-5:calc(1.25 * var(--font-size-default));
+  --h-font-size-4:calc(1.50 * var(--font-size-default));
+  --h-font-size-3:calc(1.75 * var(--font-size-default));
+  --h-font-size-2:calc(2.00 * var(--font-size-default));
+  --h-font-size-1:calc(2.25 * var(--font-size-default));
+  --h-font-family:unset;
+  --h-font-weight:500;
+  --h-font-style:unset;
+  --h-text-decoration:unset;
+  --h-lineheight:1.25;
+  --h-color:unset;
+  --h-margin-top:unset;
+  --h-margin-bottom:calc(var(--h-font-size) * 0.75);
+  --h-margin-left:unset;
+  --h-margin-right:unset;
+}
+
+/* begin: division class */
+h6, .h6 {
+  --h-font-size:var(--h-font-size-6);
+}
+
+h5, .h5 {
+  --h-font-size:var(--h-font-size-5);
+}
+
+h4, .h4 {
+  --h-font-size:var(--h-font-size-4);
+}
+
+h3, .h3 {
+  --h-font-size:var(--h-font-size-3);
+}
+
+h2, .h2 {
+  --h-font-size:var(--h-font-size-2);
+}
+
+h1, .h1 {
+  --h-font-size:var(--h-font-size-1);
+}
+
+/* end: division class */
+/* begin: general style */
+h6, .h6, h5, .h5, h4, .h4, h3, .h3, h2, .h2, h1, .h1 {
+  font-size: var(--h-font-size);
+  font-family: var(--h-font-family);
+  font-weight: var(--h-font-weight);
+  font-style: var(--h-font-style);
+  text-decoration: var(--h-text-decoration);
+  line-height: var(--h-lineheight);
+  color: var(--h-color);
+  margin-left: var(--h-margin-left);
+  margin-right: var(--h-margin-right);
+}
+h6:not(:first-child), .h6:not(:first-child), h5:not(:first-child), .h5:not(:first-child), h4:not(:first-child), .h4:not(:first-child), h3:not(:first-child), .h3:not(:first-child), h2:not(:first-child), .h2:not(:first-child), h1:not(:first-child), .h1:not(:first-child) {
+  margin-top: var(--h-margin-top);
+}
+h6:not(:last-child), .h6:not(:last-child), h5:not(:last-child), .h5:not(:last-child), h4:not(:last-child), .h4:not(:last-child), h3:not(:last-child), .h3:not(:last-child), h2:not(:last-child), .h2:not(:last-child), h1:not(:last-child), .h1:not(:last-child) {
+  margin-bottom: var(--h-margin-bottom);
+}
+
+/* end: general style */
+:root {
+  --disp-font-size-6:calc(2.50 * var(--font-size-default));
+  --disp-font-size-5:calc(3.00 * var(--font-size-default));
+  --disp-font-size-4:calc(3.50 * var(--font-size-default));
+  --disp-font-size-3:calc(4.00 * var(--font-size-default));
+  --disp-font-size-2:calc(4.50 * var(--font-size-default));
+  --disp-font-size-1:calc(5.00 * var(--font-size-default));
+  --disp-font-family:var(--h-font-family);
+  --disp-font-weight:300;
+  --disp-font-style:var(--h-font-style);
+  --disp-text-decoration:var(--h-text-decoration);
+  --disp-lineheight:var(--h-lineheight);
+  --disp-color:var(--h-color);
+  --disp-margin-top:var(--h-margin-top);
+  --disp-margin-bottom:calc(var(--disp-font-size) * 0.75);
+  --disp-margin-left:var(--h-margin-left);
+  --disp-margin-right:var(--h-margin-right);
+}
+
+/* begin: division class */
+.display-6 {
+  --disp-font-size:var(--disp-font-size-6);
+}
+
+.display-5 {
+  --disp-font-size:var(--disp-font-size-5);
+}
+
+.display-4 {
+  --disp-font-size:var(--disp-font-size-4);
+}
+
+.display-3 {
+  --disp-font-size:var(--disp-font-size-3);
+}
+
+.display-2 {
+  --disp-font-size:var(--disp-font-size-2);
+}
+
+.display-1 {
+  --disp-font-size:var(--disp-font-size-1);
+}
+
+/* end: division class */
+/* begin: general style */
+.display-6, .display-5, .display-4, .display-3, .display-2, .display-1 {
+  font-size: var(--disp-font-size);
+  font-family: var(--disp-font-family);
+  font-weight: var(--disp-font-weight);
+  font-style: var(--disp-font-style);
+  text-decoration: var(--disp-text-decoration);
+  line-height: var(--disp-lineheight);
+  color: var(--disp-color);
+  margin-left: var(--disp-margin-left);
+  margin-right: var(--disp-margin-right);
+}
+.display-6:not(:first-child), .display-5:not(:first-child), .display-4:not(:first-child), .display-3:not(:first-child), .display-2:not(:first-child), .display-1:not(:first-child) {
+  margin-top: var(--disp-margin-top);
+}
+.display-6:not(:last-child), .display-5:not(:last-child), .display-4:not(:last-child), .display-3:not(:last-child), .display-2:not(:last-child), .display-1:not(:last-child) {
+  margin-bottom: var(--disp-margin-bottom);
+}
+
+/* end: general style */
+:root {
+  --p-font-size:var(--font-size-default);
+  --p-font-family:unset;
+  --p-font-weight:unset;
+  --p-font-style:unset;
+  --p-text-decoration:unset;
+  --p-lineheight:unset;
+  --p-color:unset;
+  --p-margin-top:unset;
+  --p-margin-bottom:calc(var(--p-font-size) * 1.00);
+  --p-margin-left:unset;
+  --p-margin-right:unset;
+}
+
+/* begin: general style */
+p, .p {
+  font-size: var(--p-font-size);
+  font-family: var(--p-font-family);
+  font-weight: var(--p-font-weight);
+  font-style: var(--p-font-style);
+  text-decoration: var(--p-text-decoration);
+  line-height: var(--p-lineheight);
+  color: var(--p-color);
+  margin-left: var(--p-margin-left);
+  margin-right: var(--p-margin-right);
+}
+p:not(:first-child), .p:not(:first-child) {
+  margin-top: var(--p-margin-top);
+}
+p:not(:last-child), .p:not(:last-child) {
+  margin-bottom: var(--p-margin-bottom);
+}
+
+/* end: general style */
+:root {
+  --lead-font-size:var(--font-size-md);
+  --lead-font-family:var(--p-font-family);
+  --lead-font-weight:var(--font-weight-light);
+  --lead-font-style:var(--p-font-style);
+  --lead-text-decoration:var(--p-text-decoration);
+  --lead-lineheight:var(--p-lineheight);
+  --lead-color:var(--p-color);
+  --lead-margin-top:var(--p-margin-top);
+  --lead-margin-bottom:calc(var(--lead-font-size) * 1.00);
+  --lead-margin-left:var(--p-margin-left);
+  --lead-margin-right:var(--p-margin-right);
+}
+
+/* begin: general style */
+.lead {
+  font-size: var(--lead-font-size);
+  font-family: var(--lead-font-family);
+  font-weight: var(--lead-font-weight);
+  font-style: var(--lead-font-style);
+  text-decoration: var(--lead-text-decoration);
+  line-height: var(--lead-lineheight);
+  color: var(--lead-color);
+  margin-left: var(--lead-margin-left);
+  margin-right: var(--lead-margin-right);
+}
+.lead:not(:first-child) {
+  margin-top: var(--lead-margin-top);
+}
+.lead:not(:last-child) {
+  margin-bottom: var(--lead-margin-bottom);
+}
+
+/* end: general style */
+:root {
+  --bquote-font-size:var(--font-size-md);
+  --bquote-font-family:unset;
+  --bquote-font-weight:unset;
+  --bquote-font-style:unset;
+  --bquote-text-decoration:unset;
+  --bquote-lineheight:unset;
+  --bquote-color:unset;
+  --bquote-margin-top:unset;
+  --bquote-margin-bottom:calc(var(--bquote-font-size) * 1.00);
+  --bquote-margin-left:unset;
+  --bquote-margin-right:unset;
+}
+
+/* begin: general style */
+blockquote, .blockquote {
+  font-size: var(--bquote-font-size);
+  font-family: var(--bquote-font-family);
+  font-weight: var(--bquote-font-weight);
+  font-style: var(--bquote-font-style);
+  text-decoration: var(--bquote-text-decoration);
+  line-height: var(--bquote-lineheight);
+  color: var(--bquote-color);
+  margin-left: var(--bquote-margin-left);
+  margin-right: var(--bquote-margin-right);
+}
+blockquote:not(:first-child), .blockquote:not(:first-child) {
+  margin-top: var(--bquote-margin-top);
+}
+blockquote:not(:last-child), .blockquote:not(:last-child) {
+  margin-bottom: var(--bquote-margin-bottom);
+}
+
+/* end: general style */
+:root {
+  --mark-font-size:unset;
+  --mark-font-family:unset;
+  --mark-font-weight:unset;
+  --mark-font-style:unset;
+  --mark-text-decoration:unset;
+  --mark-lineheight:unset;
+  --mark-color:unset;
+  --mark-backg:var(--col-warning-transp);
+  --mark-padding-x:0.2em;
+  --mark-padding-y:0.2em;
+  --mark-border:var(--bd-hair);
+  --mark-border-radius:var(--bd-radius-sm);
+}
+
+/* begin: specialized style */
+samp samp, .samp .samp, var var, .var .var, kbd kbd, .kbd .kbd, code code, .code .code, .mark .mark, mark mark {
+  padding: 0px;
+  font-size: 1em;
+  font-weight: var(--font-weight-bold);
+}
+
+/* end: specialized style */
+/* begin: general style */
+mark, .mark {
+  font-size: var(--mark-font-size);
+  font-family: var(--mark-font-family);
+  font-weight: var(--mark-font-weight);
+  font-style: var(--mark-font-style);
+  text-decoration: var(--mark-text-decoration);
+  line-height: var(--mark-lineheight);
+  color: var(--mark-color);
+  background: var(--mark-backg);
+  padding-left: var(--mark-padding-x);
+  padding-right: var(--mark-padding-x);
+  padding-top: var(--mark-padding-y);
+  padding-bottom: var(--mark-padding-y);
+  border: var(--mark-border);
+  border-radius: var(--mark-border-radius);
+}
+
+/* end: general style */
+:root {
+  --code-font-size:calc((var(--font-size-md) + var(--font-size-sm)) / 2);
+  --code-font-family:var(--font-family-monospace);
+  --code-font-weight:var(--mark-font-weight);
+  --code-font-style:var(--mark-font-style);
+  --code-text-decoration:var(--mark-text-decoration);
+  --code-lineheight:var(--mark-lineheight);
+  --code-color:var(--col-pink);
+  --code-backg:unset;
+  --code-padding-x:unset;
+  --code-padding-y:unset;
+  --code-border:unset;
+  --code-border-radius:unset;
+}
+
+/* begin: specialized style */
+/* end: specialized style */
+/* begin: general style */
+code, .code {
+  font-size: var(--code-font-size);
+  font-family: var(--code-font-family);
+  font-weight: var(--code-font-weight);
+  font-style: var(--code-font-style);
+  text-decoration: var(--code-text-decoration);
+  line-height: var(--code-lineheight);
+  color: var(--code-color);
+  background: var(--code-backg);
+  padding-left: var(--code-padding-x);
+  padding-right: var(--code-padding-x);
+  padding-top: var(--code-padding-y);
+  padding-bottom: var(--code-padding-y);
+  border: var(--code-border);
+  border-radius: var(--code-border-radius);
+  direction: ltr;
+  unicode-bidi: bidi-override;
+  word-wrap: break-word;
+}
+
+/* end: general style */
+:root {
+  --kbd-font-size:var(--code-font-size);
+  --kbd-font-family:var(--code-font-family);
+  --kbd-font-weight:var(--code-font-weight);
+  --kbd-font-style:var(--code-font-style);
+  --kbd-text-decoration:var(--code-text-decoration);
+  --kbd-lineheight:var(--code-lineheight);
+  --kbd-color:var(--col-white);
+  --kbd-backg:var(--col-gray-dark);
+  --kbd-padding-x:0.4rem;
+  --kbd-padding-y:0.2rem;
+  --kbd-border:var(--mark-border);
+  --kbd-border-radius:var(--mark-border-radius);
+}
+
+/* begin: specialized style */
+/* end: specialized style */
+/* begin: general style */
+kbd, .kbd {
+  font-size: var(--kbd-font-size);
+  font-family: var(--kbd-font-family);
+  font-weight: var(--kbd-font-weight);
+  font-style: var(--kbd-font-style);
+  text-decoration: var(--kbd-text-decoration);
+  line-height: var(--kbd-lineheight);
+  color: var(--kbd-color);
+  background: var(--kbd-backg);
+  padding-left: var(--kbd-padding-x);
+  padding-right: var(--kbd-padding-x);
+  padding-top: var(--kbd-padding-y);
+  padding-bottom: var(--kbd-padding-y);
+  border: var(--kbd-border);
+  border-radius: var(--kbd-border-radius);
+  direction: ltr;
+  unicode-bidi: bidi-override;
+  word-wrap: break-word;
+}
+
+/* end: general style */
+:root {
+  --var-font-size:var(--code-font-size);
+  --var-font-family:var(--code-font-family);
+  --var-font-weight:var(--code-font-weight);
+  --var-font-style:var(--code-font-style);
+  --var-text-decoration:var(--code-text-decoration);
+  --var-lineheight:var(--code-lineheight);
+  --var-color:var(--code-color);
+  --var-backg:var(--code-backg);
+  --var-padding-x:var(--code-padding-x);
+  --var-padding-y:var(--code-padding-y);
+  --var-border:var(--code-border);
+  --var-border-radius:var(--code-border-radius);
+}
+
+/* begin: specialized style */
+/* end: specialized style */
+/* begin: general style */
+var, .var {
+  font-size: var(--var-font-size);
+  font-family: var(--var-font-family);
+  font-weight: var(--var-font-weight);
+  font-style: var(--var-font-style);
+  text-decoration: var(--var-text-decoration);
+  line-height: var(--var-lineheight);
+  color: var(--var-color);
+  background: var(--var-backg);
+  padding-left: var(--var-padding-x);
+  padding-right: var(--var-padding-x);
+  padding-top: var(--var-padding-y);
+  padding-bottom: var(--var-padding-y);
+  border: var(--var-border);
+  border-radius: var(--var-border-radius);
+  direction: ltr;
+  unicode-bidi: bidi-override;
+  word-wrap: break-word;
+}
+
+/* end: general style */
+:root {
+  --samp-font-size:var(--code-font-size);
+  --samp-font-family:var(--code-font-family);
+  --samp-font-weight:var(--code-font-weight);
+  --samp-font-style:var(--code-font-style);
+  --samp-text-decoration:var(--code-text-decoration);
+  --samp-lineheight:var(--code-lineheight);
+  --samp-color:var(--code-color);
+  --samp-backg:var(--code-backg);
+  --samp-padding-x:var(--code-padding-x);
+  --samp-padding-y:var(--code-padding-y);
+  --samp-border:var(--code-border);
+  --samp-border-radius:var(--code-border-radius);
+}
+
+/* begin: specialized style */
+/* end: specialized style */
+/* begin: general style */
+samp, .samp {
+  font-size: var(--samp-font-size);
+  font-family: var(--samp-font-family);
+  font-weight: var(--samp-font-weight);
+  font-style: var(--samp-font-style);
+  text-decoration: var(--samp-text-decoration);
+  line-height: var(--samp-lineheight);
+  color: var(--samp-color);
+  background: var(--samp-backg);
+  padding-left: var(--samp-padding-x);
+  padding-right: var(--samp-padding-x);
+  padding-top: var(--samp-padding-y);
+  padding-bottom: var(--samp-padding-y);
+  border: var(--samp-border);
+  border-radius: var(--samp-border-radius);
+  direction: ltr;
+  unicode-bidi: bidi-override;
+  word-wrap: break-word;
+}
+
+/* end: general style */
+/* begin: general style */
+/* end: general style */
+del, s {
+  text-decoration: line-through;
+}
+
+ins, u {
+  text-decoration: underline;
+}
+
+small, .small {
+  font-size: var(--font-size-sm);
+}
+
+strong, b {
+  font-weight: var(--font-weight-bolder);
+}
+
+em, i {
+  font-style: italic;
+}
+
+:root {
+  --hr-color:currentColor;
+  --hr-opacity:0.25;
+  --hr-height:var(--bd-hair);
+  --hr-margin-top:var(--spc-default);
+  --hr-margin-bottom:var(--spc-default);
+  --hr-margin-left:unset;
+  --hr-margin-right:unset;
+}
+
+/* begin: general style */
+hr {
+  color: inherit;
+  background-color: var(--hr-color);
+  opacity: var(--hr-opacity);
+  height: var(--hr-height);
+  margin-top: var(--hr-margin-top);
+  margin-bottom: var(--hr-margin-bottom);
+  margin-left: var(--hr-margin-left);
+  margin-right: var(--hr-margin-right);
+  border: 0px;
+}
+
+/* end: general style */
+:root {
+  --dl-margin-top:0px;
+  --dl-margin-bottom:var(--spc-default);
+  --dl-margin-left:0px;
+  --dl-margin-right:0px;
+  --dl-dt-font-size:unset;
+  --dl-dt-font-family:unset;
+  --dl-dt-font-weight:var(--font-weight-bold);
+  --dl-dt-font-style:unset;
+  --dl-dt-text-decoration:unset;
+  --dl-dt-lineheight:unset;
+  --dl-dt-color:unset;
+  --dl-dt-margin-top:0px;
+  --dl-dt-margin-bottom:0px;
+  --dl-dt-margin-left:0px;
+  --dl-dt-margin-right:0px;
+  --dl-dd-font-size:unset;
+  --dl-dd-font-family:unset;
+  --dl-dd-font-weight:unset;
+  --dl-dd-font-style:unset;
+  --dl-dd-text-decoration:unset;
+  --dl-dd-lineheight:unset;
+  --dl-dd-color:unset;
+  --dl-dd-margin-top:0px;
+  --dl-dd-margin-bottom:var(--spc-sm);
+  --dl-dd-margin-left:0px;
+  --dl-dd-margin-right:0px;
+}
+
+/* begin: general style */
+dl {
+  margin-left: var(--dl-margin-left);
+  margin-right: var(--dl-margin-right);
+}
+dl:not(:first-child) {
+  margin-top: var(--dl-margin-top);
+}
+dl:not(:last-child) {
+  margin-bottom: var(--dl-margin-bottom);
+}
+dl > dt {
+  font-size: var(--dl-dt-font-size);
+  font-family: var(--dl-dt-font-family);
+  font-weight: var(--dl-dt-font-weight);
+  font-style: var(--dl-dt-font-style);
+  text-decoration: var(--dl-dt-text-decoration);
+  line-height: var(--dl-dt-lineheight);
+  color: var(--dl-dt-color);
+  margin-top: var(--dl-dt-margin-top);
+  margin-bottom: var(--dl-dt-margin-bottom);
+  margin-left: var(--dl-dt-margin-left);
+  margin-right: var(--dl-dt-margin-right);
+}
+dl > dd {
+  font-size: var(--dl-dd-font-size);
+  font-family: var(--dl-dd-font-family);
+  font-weight: var(--dl-dd-font-weight);
+  font-style: var(--dl-dd-font-style);
+  text-decoration: var(--dl-dd-text-decoration);
+  line-height: var(--dl-dd-lineheight);
+  color: var(--dl-dd-color);
+  margin-top: var(--dl-dd-margin-top);
+  margin-bottom: var(--dl-dd-margin-bottom);
+  margin-left: var(--dl-dd-margin-left);
+  margin-right: var(--dl-dd-margin-right);
+}
+
+/* end: general style */
+:root {
+  --elm-backg-h: 0deg;
+  --elm-backg-s: 0%;
+  --elm-backg-l: 0%;
+  --elm-backg-a: 0;
+  --elm-backg:hsla(var(--elm-backg-h), var(--elm-backg-s), var(--elm-backg-l), var(--elm-backg-a));
+  --elm-backg-gradient: linear-gradient(180deg, rgba(255, 255, 255, 0.15), rgba(255, 255, 255, 0)) border-box;
+  --elm-color-h:var(--elm-backg-h);
+  --elm-color-s:var(--elm-backg-s);
+  --elm-color-l:clamp(0%, (var(--elm-backg-l) - var(--col-contrast-threshold)) * -1000, 100%);
+  --elm-color-a: 100%;
+  --elm-color:hsla(var(--elm-color-h), var(--elm-color-s), var(--elm-color-l), var(--elm-color-a));
+  --elm-font-size:var(--font-size-default);
+  --elm-font-size-sm:calc((var(--font-size-nm) + var(--font-size-sm)) / 2);
+  --elm-font-size-lg:var(--font-size-md);
+  --elm-font-family:unset;
+  --elm-font-weight:unset;
+  --elm-font-style:unset;
+  --elm-text-decoration:unset;
+  --elm-lineheight:unset;
+  --elm-padding-x:calc((var(--spc-sm) + var(--spc-md)) / 2);
+  --elm-padding-y:calc((var(--spc-xs) + var(--spc-sm)) / 2);
+  --elm-padding-x-sm:var(--spc-sm);
+  --elm-padding-y-sm:var(--spc-xs);
+  --elm-padding-x-lg:var(--spc-md);
+  --elm-padding-y-lg:var(--spc-sm);
+  --elm-border: var(--bd-default) var(--bd-style) var(--bd-color);
+  --elm-border-radius:var(--bd-radius-default);
+  --elm-border-radius-sm:var(--bd-radius-sm);
+  --elm-border-radius-lg:var(--bd-radius-lg);
+  --elm-filter:brightness(100%);
+  --elm-filter-hover: brightness(80%) contrast(150%);
+  --elm-anim:elm-anim-none;
+  --elm-anim-hover: 150ms ease-out both elm-anim-hover;
+  --elm-anim-leave: 300ms ease-out both elm-anim-leave;
+  --elm-backg-primary-h: 215.75deg;
+  --elm-backg-primary-s: 98.3606557377%;
+  --elm-backg-primary-l: 52.1568627451%;
+  --elm-backg-primary-a: 1;
+  --elm-backg-primary:hsla(var(--elm-backg-primary-h), var(--elm-backg-primary-s), var(--elm-backg-primary-l), var(--elm-backg-primary-a));
+  /*
+      https://css-tricks.com/converting-color-spaces-in-javascript/
+
+      c = (1 - Math.abs(2 * l - 1)) * s
+      x = c * (1 - Math.abs(((h / 60%) % 2) - 1))
+      m = l - c/2
+
+
+
+      c = (1 -  abs(2 * l - 1) ) * s
+      c = (1 - [abs(2 * l - 1)]) * s
+      c = (1 - [(2 * l - 1) * clamp(-1, (2 * l - 1) * 999, 1)]) * s
+      --------------------------------------------------------------
+
+
+      x = c * (1 -  abs(((h / 60%) % 2) - 1))
+      x = c * (1 -  abs(((h % 120%) / 60) - 1))
+
+      d = h % 120%
+      d = h - (clamp(0, ((h - 120) * 999) + 1, 1) + clamp(0, ((h - 240) * 999) + 1, 1) + clamp(0, ((h - 360) * 999) + 1, 1)) * 120
+      ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+      x = c * (1 -  abs((d / 60) - 1))
+      x = c * (1 -    [((d / 60) - 1) * clamp(-1, ((d / 60) - 1) * 999, 1)])
+      -----------------------------------------------------------------------
+
+      m = l - c / 2
+      -------------
+
+
+
+
+           if (300 <= h && h < 360) {         clamp(0, ((h - 300) * 999) + 1, 1)  *   clamp(0, (360 - h) * 999, 1)
+          r = c; g = 0; b = x;
+      }
+      else if (0 <= h   && h < 60)  {         clamp(0, ((h - 0) * 999) + 1, 1)    *   clamp(0, (60 - h) * 999, 1)
+          r = c; g = x; b = 0;
+      }
+
+      else if (60 <= h  && h < 120) {         clamp(0, ((h - 60) * 999) + 1, 1)   *   clamp(0, (120 - h) * 999, 1)
+          r = x; g = c; b = 0;
+      }
+      else if (120 <= h && h < 180) {         clamp(0, ((h - 120) * 999) + 1, 1)  *   clamp(0, (180 - h) * 999, 1)
+          r = 0; g = c; b = x;
+      }
+
+      else if (180 <= h && h < 240) {         clamp(0, ((h - 180) * 999) + 1, 1)  *   clamp(0, (240 - h) * 999, 1)
+          r = 0; g = x; b = c;
+      }
+      else if (240 <= h && h < 300) {         clamp(0, ((h - 240) * 999) + 1, 1)  *   clamp(0, (300 - h) * 999, 1)
+          r = x; g = 0; b = c;
+      }
+
+
+      r = m
+          +
+          (c * clamp(0, clamp(0, ((h - 300) * 999) + 1, 1) * clamp(0, (360 - h) * 999, 1) + clamp(0, ((h - 0) * 999) + 1, 1) * clamp(0, (60 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 60) * 999) + 1, 1) * clamp(0, (120 - h) * 999, 1) + clamp(0, ((h - 240) * 999) + 1, 1) * clamp(0, (300 - h) * 999, 1), 1))
+
+      g = m
+          +
+          (c * clamp(0, clamp(0, ((h - 60) * 999) + 1, 1) * clamp(0, (120 - h) * 999, 1) + clamp(0, ((h - 120) * 999) + 1, 1) * clamp(0, (180 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 0) * 999) + 1, 1) * clamp(0, (60 - h) * 999, 1) + clamp(0, ((h - 180) * 999) + 1, 1) * clamp(0, (240 - h) * 999, 1), 1))
+
+      b = m
+          +
+          (c * clamp(0, clamp(0, ((h - 180) * 999) + 1, 1) * clamp(0, (240 - h) * 999, 1) + clamp(0, ((h - 240) * 999) + 1, 1) * clamp(0, (300 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 300) * 999) + 1, 1) * clamp(0, (360 - h) * 999, 1) + clamp(0, ((h - 120) * 999) + 1, 1) * clamp(0, (180 - h) * 999, 1), 1))
+
+  */
+  /*
+      c: (1 - ((2*l - 1)*clamp(-1,(2*l - 1)*999,1)))*s;
+      d: h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120;
+
+      x: c*(1 - (((d/60) - 1)*clamp(-1,((d/60) - 1)*999,1)));
+      (with d) x: c*(1 - ((((h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120)/60) - 1)*clamp(-1,(((h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120)/60) - 1)*999,1)));
+
+      m: l - c/2;
+      r: (m + (c*clamp(0,clamp(0,((h - 300)*999) + 1,1)*clamp(0,(360 - h)*999,1) + clamp(0,((h - 0)*999) + 1,1)*clamp(0,(60 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 60)*999) + 1,1)*clamp(0,(120 - h)*999,1) + clamp(0,((h - 240)*999) + 1,1)*clamp(0,(300 - h)*999,1),1)))*255;
+      g: (m + (c*clamp(0,clamp(0,((h - 60)*999) + 1,1)*clamp(0,(120 - h)*999,1) + clamp(0,((h - 120)*999) + 1,1)*clamp(0,(180 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 0)*999) + 1,1)*clamp(0,(60 - h)*999,1) + clamp(0,((h - 180)*999) + 1,1)*clamp(0,(240 - h)*999,1),1)))*255;
+      b: (m + (c*clamp(0,clamp(0,((h - 180)*999) + 1,1)*clamp(0,(240 - h)*999,1) + clamp(0,((h - 240)*999) + 1,1)*clamp(0,(300 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 300)*999) + 1,1)*clamp(0,(360 - h)*999,1) + clamp(0,((h - 120)*999) + 1,1)*clamp(0,(180 - h)*999,1),1)))*255;
+  */
+  /*
+
+      --elm-backg-primary-c: string.unquote("calc((1 - ((2*var(--elm-backg-primary-l) - 1)*clamp(-1,(2*var(--elm-backg-primary-l) - 1)*999,1)))*var(--elm-backg-primary-s))");
+      --elm-backg-primary-x: string.unquote("calc(var(--elm-backg-primary-c)*(1 - ((((var(--elm-backg-primary-h) - (clamp(0,((var(--elm-backg-primary-h) - 120)*999) + 1,1) + clamp(0,((var(--elm-backg-primary-h) - 240)*999) + 1,1) + clamp(0,((var(--elm-backg-primary-h) - 360)*999) + 1,1))*120)/60) - 1)*clamp(-1,(((var(--elm-backg-primary-h) - (clamp(0,((var(--elm-backg-primary-h) - 120)*999) + 1,1) + clamp(0,((var(--elm-backg-primary-h) - 240)*999) + 1,1) + clamp(0,((var(--elm-backg-primary-h) - 360)*999) + 1,1))*120)/60) - 1)*999,1))))");
+
+      --elm-backg-primary-r: string.unquote("calc(((var(--elm-backg-primary-l) - var(--elm-backg-primary-c)/2) + (var(--elm-backg-primary-c)*clamp(0,clamp(0,((var(--elm-backg-primary-h) - 300)*999) + 1,1)*clamp(0,(360 - var(--elm-backg-primary-h))*999,1) + clamp(0,((var(--elm-backg-primary-h) - 0)*999) + 1,1)*clamp(0,(60 - var(--elm-backg-primary-h))*999,1),1)) + (var(--elm-backg-primary-x)*clamp(0,clamp(0,((var(--elm-backg-primary-h) - 60)*999) + 1,1)*clamp(0,(120 - var(--elm-backg-primary-h))*999,1) + clamp(0,((var(--elm-backg-primary-h) - 240)*999) + 1,1)*clamp(0,(300 - var(--elm-backg-primary-h))*999,1),1)))*255)");
+      --elm-backg-primary-g: string.unquote("calc(((var(--elm-backg-primary-l) - var(--elm-backg-primary-c)/2) + (var(--elm-backg-primary-c)*clamp(0,clamp(0,((var(--elm-backg-primary-h) - 60)*999) + 1,1)*clamp(0,(120 - var(--elm-backg-primary-h))*999,1) + clamp(0,((var(--elm-backg-primary-h) - 120)*999) + 1,1)*clamp(0,(180 - var(--elm-backg-primary-h))*999,1),1)) + (var(--elm-backg-primary-x)*clamp(0,clamp(0,((var(--elm-backg-primary-h) - 0)*999) + 1,1)*clamp(0,(60 - var(--elm-backg-primary-h))*999,1) + clamp(0,((var(--elm-backg-primary-h) - 180)*999) + 1,1)*clamp(0,(240 - var(--elm-backg-primary-h))*999,1),1)))*255)");
+      --elm-backg-primary-b: string.unquote("calc(((var(--elm-backg-primary-l) - var(--elm-backg-primary-c)/2) + (var(--elm-backg-primary-c)*clamp(0,clamp(0,((var(--elm-backg-primary-h) - 180)*999) + 1,1)*clamp(0,(240 - var(--elm-backg-primary-h))*999,1) + clamp(0,((var(--elm-backg-primary-h) - 240)*999) + 1,1)*clamp(0,(300 - var(--elm-backg-primary-h))*999,1),1)) + (var(--elm-backg-primary-x)*clamp(0,clamp(0,((var(--elm-backg-primary-h) - 300)*999) + 1,1)*clamp(0,(360 - var(--elm-backg-primary-h))*999,1) + clamp(0,((var(--elm-backg-primary-h) - 120)*999) + 1,1)*clamp(0,(180 - var(--elm-backg-primary-h))*999,1),1)))*255)");
+
+  */
+  --elm-color-primary-h:var(--elm-backg-primary-h);
+  --elm-color-primary-s:var(--elm-backg-primary-s);
+  --elm-color-primary-x:var(--elm-backg-primary-l) + (clamp(0, ((var(--elm-backg-primary-l) - 0.5) * 1000) + 1, 1) * var(--elm-backg-primary-s)) + (var(--elm-backg-primary-l) * var(--elm-backg-primary-s) * clamp(-1, ((var(--elm-backg-primary-l) - 0.5) * -1000) - 1, 1));
+  --elm-color-primary-l:clamp(0%, (var(--elm-backg-primary-l) - var(--col-contrast-threshold)) * -1000, 100%);
+  --elm-color-primary-a: 100%;
+  --elm-color-primary:hsla(var(--elm-color-primary-h), var(--elm-color-primary-s), var(--elm-color-primary-l), var(--elm-color-primary-a));
+  --elm-backg-secondary-h: 208.2352941176deg;
+  --elm-backg-secondary-s: 7.2961373391%;
+  --elm-backg-secondary-l: 45.6862745098%;
+  --elm-backg-secondary-a: 1;
+  --elm-backg-secondary:hsla(var(--elm-backg-secondary-h), var(--elm-backg-secondary-s), var(--elm-backg-secondary-l), var(--elm-backg-secondary-a));
+  /*
+      https://css-tricks.com/converting-color-spaces-in-javascript/
+
+      c = (1 - Math.abs(2 * l - 1)) * s
+      x = c * (1 - Math.abs(((h / 60%) % 2) - 1))
+      m = l - c/2
+
+
+
+      c = (1 -  abs(2 * l - 1) ) * s
+      c = (1 - [abs(2 * l - 1)]) * s
+      c = (1 - [(2 * l - 1) * clamp(-1, (2 * l - 1) * 999, 1)]) * s
+      --------------------------------------------------------------
+
+
+      x = c * (1 -  abs(((h / 60%) % 2) - 1))
+      x = c * (1 -  abs(((h % 120%) / 60) - 1))
+
+      d = h % 120%
+      d = h - (clamp(0, ((h - 120) * 999) + 1, 1) + clamp(0, ((h - 240) * 999) + 1, 1) + clamp(0, ((h - 360) * 999) + 1, 1)) * 120
+      ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+      x = c * (1 -  abs((d / 60) - 1))
+      x = c * (1 -    [((d / 60) - 1) * clamp(-1, ((d / 60) - 1) * 999, 1)])
+      -----------------------------------------------------------------------
+
+      m = l - c / 2
+      -------------
+
+
+
+
+           if (300 <= h && h < 360) {         clamp(0, ((h - 300) * 999) + 1, 1)  *   clamp(0, (360 - h) * 999, 1)
+          r = c; g = 0; b = x;
+      }
+      else if (0 <= h   && h < 60)  {         clamp(0, ((h - 0) * 999) + 1, 1)    *   clamp(0, (60 - h) * 999, 1)
+          r = c; g = x; b = 0;
+      }
+
+      else if (60 <= h  && h < 120) {         clamp(0, ((h - 60) * 999) + 1, 1)   *   clamp(0, (120 - h) * 999, 1)
+          r = x; g = c; b = 0;
+      }
+      else if (120 <= h && h < 180) {         clamp(0, ((h - 120) * 999) + 1, 1)  *   clamp(0, (180 - h) * 999, 1)
+          r = 0; g = c; b = x;
+      }
+
+      else if (180 <= h && h < 240) {         clamp(0, ((h - 180) * 999) + 1, 1)  *   clamp(0, (240 - h) * 999, 1)
+          r = 0; g = x; b = c;
+      }
+      else if (240 <= h && h < 300) {         clamp(0, ((h - 240) * 999) + 1, 1)  *   clamp(0, (300 - h) * 999, 1)
+          r = x; g = 0; b = c;
+      }
+
+
+      r = m
+          +
+          (c * clamp(0, clamp(0, ((h - 300) * 999) + 1, 1) * clamp(0, (360 - h) * 999, 1) + clamp(0, ((h - 0) * 999) + 1, 1) * clamp(0, (60 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 60) * 999) + 1, 1) * clamp(0, (120 - h) * 999, 1) + clamp(0, ((h - 240) * 999) + 1, 1) * clamp(0, (300 - h) * 999, 1), 1))
+
+      g = m
+          +
+          (c * clamp(0, clamp(0, ((h - 60) * 999) + 1, 1) * clamp(0, (120 - h) * 999, 1) + clamp(0, ((h - 120) * 999) + 1, 1) * clamp(0, (180 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 0) * 999) + 1, 1) * clamp(0, (60 - h) * 999, 1) + clamp(0, ((h - 180) * 999) + 1, 1) * clamp(0, (240 - h) * 999, 1), 1))
+
+      b = m
+          +
+          (c * clamp(0, clamp(0, ((h - 180) * 999) + 1, 1) * clamp(0, (240 - h) * 999, 1) + clamp(0, ((h - 240) * 999) + 1, 1) * clamp(0, (300 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 300) * 999) + 1, 1) * clamp(0, (360 - h) * 999, 1) + clamp(0, ((h - 120) * 999) + 1, 1) * clamp(0, (180 - h) * 999, 1), 1))
+
+  */
+  /*
+      c: (1 - ((2*l - 1)*clamp(-1,(2*l - 1)*999,1)))*s;
+      d: h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120;
+
+      x: c*(1 - (((d/60) - 1)*clamp(-1,((d/60) - 1)*999,1)));
+      (with d) x: c*(1 - ((((h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120)/60) - 1)*clamp(-1,(((h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120)/60) - 1)*999,1)));
+
+      m: l - c/2;
+      r: (m + (c*clamp(0,clamp(0,((h - 300)*999) + 1,1)*clamp(0,(360 - h)*999,1) + clamp(0,((h - 0)*999) + 1,1)*clamp(0,(60 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 60)*999) + 1,1)*clamp(0,(120 - h)*999,1) + clamp(0,((h - 240)*999) + 1,1)*clamp(0,(300 - h)*999,1),1)))*255;
+      g: (m + (c*clamp(0,clamp(0,((h - 60)*999) + 1,1)*clamp(0,(120 - h)*999,1) + clamp(0,((h - 120)*999) + 1,1)*clamp(0,(180 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 0)*999) + 1,1)*clamp(0,(60 - h)*999,1) + clamp(0,((h - 180)*999) + 1,1)*clamp(0,(240 - h)*999,1),1)))*255;
+      b: (m + (c*clamp(0,clamp(0,((h - 180)*999) + 1,1)*clamp(0,(240 - h)*999,1) + clamp(0,((h - 240)*999) + 1,1)*clamp(0,(300 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 300)*999) + 1,1)*clamp(0,(360 - h)*999,1) + clamp(0,((h - 120)*999) + 1,1)*clamp(0,(180 - h)*999,1),1)))*255;
+  */
+  /*
+
+      --elm-backg-secondary-c: string.unquote("calc((1 - ((2*var(--elm-backg-secondary-l) - 1)*clamp(-1,(2*var(--elm-backg-secondary-l) - 1)*999,1)))*var(--elm-backg-secondary-s))");
+      --elm-backg-secondary-x: string.unquote("calc(var(--elm-backg-secondary-c)*(1 - ((((var(--elm-backg-secondary-h) - (clamp(0,((var(--elm-backg-secondary-h) - 120)*999) + 1,1) + clamp(0,((var(--elm-backg-secondary-h) - 240)*999) + 1,1) + clamp(0,((var(--elm-backg-secondary-h) - 360)*999) + 1,1))*120)/60) - 1)*clamp(-1,(((var(--elm-backg-secondary-h) - (clamp(0,((var(--elm-backg-secondary-h) - 120)*999) + 1,1) + clamp(0,((var(--elm-backg-secondary-h) - 240)*999) + 1,1) + clamp(0,((var(--elm-backg-secondary-h) - 360)*999) + 1,1))*120)/60) - 1)*999,1))))");
+
+      --elm-backg-secondary-r: string.unquote("calc(((var(--elm-backg-secondary-l) - var(--elm-backg-secondary-c)/2) + (var(--elm-backg-secondary-c)*clamp(0,clamp(0,((var(--elm-backg-secondary-h) - 300)*999) + 1,1)*clamp(0,(360 - var(--elm-backg-secondary-h))*999,1) + clamp(0,((var(--elm-backg-secondary-h) - 0)*999) + 1,1)*clamp(0,(60 - var(--elm-backg-secondary-h))*999,1),1)) + (var(--elm-backg-secondary-x)*clamp(0,clamp(0,((var(--elm-backg-secondary-h) - 60)*999) + 1,1)*clamp(0,(120 - var(--elm-backg-secondary-h))*999,1) + clamp(0,((var(--elm-backg-secondary-h) - 240)*999) + 1,1)*clamp(0,(300 - var(--elm-backg-secondary-h))*999,1),1)))*255)");
+      --elm-backg-secondary-g: string.unquote("calc(((var(--elm-backg-secondary-l) - var(--elm-backg-secondary-c)/2) + (var(--elm-backg-secondary-c)*clamp(0,clamp(0,((var(--elm-backg-secondary-h) - 60)*999) + 1,1)*clamp(0,(120 - var(--elm-backg-secondary-h))*999,1) + clamp(0,((var(--elm-backg-secondary-h) - 120)*999) + 1,1)*clamp(0,(180 - var(--elm-backg-secondary-h))*999,1),1)) + (var(--elm-backg-secondary-x)*clamp(0,clamp(0,((var(--elm-backg-secondary-h) - 0)*999) + 1,1)*clamp(0,(60 - var(--elm-backg-secondary-h))*999,1) + clamp(0,((var(--elm-backg-secondary-h) - 180)*999) + 1,1)*clamp(0,(240 - var(--elm-backg-secondary-h))*999,1),1)))*255)");
+      --elm-backg-secondary-b: string.unquote("calc(((var(--elm-backg-secondary-l) - var(--elm-backg-secondary-c)/2) + (var(--elm-backg-secondary-c)*clamp(0,clamp(0,((var(--elm-backg-secondary-h) - 180)*999) + 1,1)*clamp(0,(240 - var(--elm-backg-secondary-h))*999,1) + clamp(0,((var(--elm-backg-secondary-h) - 240)*999) + 1,1)*clamp(0,(300 - var(--elm-backg-secondary-h))*999,1),1)) + (var(--elm-backg-secondary-x)*clamp(0,clamp(0,((var(--elm-backg-secondary-h) - 300)*999) + 1,1)*clamp(0,(360 - var(--elm-backg-secondary-h))*999,1) + clamp(0,((var(--elm-backg-secondary-h) - 120)*999) + 1,1)*clamp(0,(180 - var(--elm-backg-secondary-h))*999,1),1)))*255)");
+
+  */
+  --elm-color-secondary-h:var(--elm-backg-secondary-h);
+  --elm-color-secondary-s:var(--elm-backg-secondary-s);
+  --elm-color-secondary-x:var(--elm-backg-secondary-l) + (clamp(0, ((var(--elm-backg-secondary-l) - 0.5) * 1000) + 1, 1) * var(--elm-backg-secondary-s)) + (var(--elm-backg-secondary-l) * var(--elm-backg-secondary-s) * clamp(-1, ((var(--elm-backg-secondary-l) - 0.5) * -1000) - 1, 1));
+  --elm-color-secondary-l:clamp(0%, (var(--elm-backg-secondary-l) - var(--col-contrast-threshold)) * -1000, 100%);
+  --elm-color-secondary-a: 100%;
+  --elm-color-secondary:hsla(var(--elm-color-secondary-h), var(--elm-color-secondary-s), var(--elm-color-secondary-l), var(--elm-color-secondary-a));
+  --elm-backg-success-h: 152.1818181818deg;
+  --elm-backg-success-s: 68.75%;
+  --elm-backg-success-l: 31.3725490196%;
+  --elm-backg-success-a: 1;
+  --elm-backg-success:hsla(var(--elm-backg-success-h), var(--elm-backg-success-s), var(--elm-backg-success-l), var(--elm-backg-success-a));
+  /*
+      https://css-tricks.com/converting-color-spaces-in-javascript/
+
+      c = (1 - Math.abs(2 * l - 1)) * s
+      x = c * (1 - Math.abs(((h / 60%) % 2) - 1))
+      m = l - c/2
+
+
+
+      c = (1 -  abs(2 * l - 1) ) * s
+      c = (1 - [abs(2 * l - 1)]) * s
+      c = (1 - [(2 * l - 1) * clamp(-1, (2 * l - 1) * 999, 1)]) * s
+      --------------------------------------------------------------
+
+
+      x = c * (1 -  abs(((h / 60%) % 2) - 1))
+      x = c * (1 -  abs(((h % 120%) / 60) - 1))
+
+      d = h % 120%
+      d = h - (clamp(0, ((h - 120) * 999) + 1, 1) + clamp(0, ((h - 240) * 999) + 1, 1) + clamp(0, ((h - 360) * 999) + 1, 1)) * 120
+      ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+      x = c * (1 -  abs((d / 60) - 1))
+      x = c * (1 -    [((d / 60) - 1) * clamp(-1, ((d / 60) - 1) * 999, 1)])
+      -----------------------------------------------------------------------
+
+      m = l - c / 2
+      -------------
+
+
+
+
+           if (300 <= h && h < 360) {         clamp(0, ((h - 300) * 999) + 1, 1)  *   clamp(0, (360 - h) * 999, 1)
+          r = c; g = 0; b = x;
+      }
+      else if (0 <= h   && h < 60)  {         clamp(0, ((h - 0) * 999) + 1, 1)    *   clamp(0, (60 - h) * 999, 1)
+          r = c; g = x; b = 0;
+      }
+
+      else if (60 <= h  && h < 120) {         clamp(0, ((h - 60) * 999) + 1, 1)   *   clamp(0, (120 - h) * 999, 1)
+          r = x; g = c; b = 0;
+      }
+      else if (120 <= h && h < 180) {         clamp(0, ((h - 120) * 999) + 1, 1)  *   clamp(0, (180 - h) * 999, 1)
+          r = 0; g = c; b = x;
+      }
+
+      else if (180 <= h && h < 240) {         clamp(0, ((h - 180) * 999) + 1, 1)  *   clamp(0, (240 - h) * 999, 1)
+          r = 0; g = x; b = c;
+      }
+      else if (240 <= h && h < 300) {         clamp(0, ((h - 240) * 999) + 1, 1)  *   clamp(0, (300 - h) * 999, 1)
+          r = x; g = 0; b = c;
+      }
+
+
+      r = m
+          +
+          (c * clamp(0, clamp(0, ((h - 300) * 999) + 1, 1) * clamp(0, (360 - h) * 999, 1) + clamp(0, ((h - 0) * 999) + 1, 1) * clamp(0, (60 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 60) * 999) + 1, 1) * clamp(0, (120 - h) * 999, 1) + clamp(0, ((h - 240) * 999) + 1, 1) * clamp(0, (300 - h) * 999, 1), 1))
+
+      g = m
+          +
+          (c * clamp(0, clamp(0, ((h - 60) * 999) + 1, 1) * clamp(0, (120 - h) * 999, 1) + clamp(0, ((h - 120) * 999) + 1, 1) * clamp(0, (180 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 0) * 999) + 1, 1) * clamp(0, (60 - h) * 999, 1) + clamp(0, ((h - 180) * 999) + 1, 1) * clamp(0, (240 - h) * 999, 1), 1))
+
+      b = m
+          +
+          (c * clamp(0, clamp(0, ((h - 180) * 999) + 1, 1) * clamp(0, (240 - h) * 999, 1) + clamp(0, ((h - 240) * 999) + 1, 1) * clamp(0, (300 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 300) * 999) + 1, 1) * clamp(0, (360 - h) * 999, 1) + clamp(0, ((h - 120) * 999) + 1, 1) * clamp(0, (180 - h) * 999, 1), 1))
+
+  */
+  /*
+      c: (1 - ((2*l - 1)*clamp(-1,(2*l - 1)*999,1)))*s;
+      d: h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120;
+
+      x: c*(1 - (((d/60) - 1)*clamp(-1,((d/60) - 1)*999,1)));
+      (with d) x: c*(1 - ((((h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120)/60) - 1)*clamp(-1,(((h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120)/60) - 1)*999,1)));
+
+      m: l - c/2;
+      r: (m + (c*clamp(0,clamp(0,((h - 300)*999) + 1,1)*clamp(0,(360 - h)*999,1) + clamp(0,((h - 0)*999) + 1,1)*clamp(0,(60 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 60)*999) + 1,1)*clamp(0,(120 - h)*999,1) + clamp(0,((h - 240)*999) + 1,1)*clamp(0,(300 - h)*999,1),1)))*255;
+      g: (m + (c*clamp(0,clamp(0,((h - 60)*999) + 1,1)*clamp(0,(120 - h)*999,1) + clamp(0,((h - 120)*999) + 1,1)*clamp(0,(180 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 0)*999) + 1,1)*clamp(0,(60 - h)*999,1) + clamp(0,((h - 180)*999) + 1,1)*clamp(0,(240 - h)*999,1),1)))*255;
+      b: (m + (c*clamp(0,clamp(0,((h - 180)*999) + 1,1)*clamp(0,(240 - h)*999,1) + clamp(0,((h - 240)*999) + 1,1)*clamp(0,(300 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 300)*999) + 1,1)*clamp(0,(360 - h)*999,1) + clamp(0,((h - 120)*999) + 1,1)*clamp(0,(180 - h)*999,1),1)))*255;
+  */
+  /*
+
+      --elm-backg-success-c: string.unquote("calc((1 - ((2*var(--elm-backg-success-l) - 1)*clamp(-1,(2*var(--elm-backg-success-l) - 1)*999,1)))*var(--elm-backg-success-s))");
+      --elm-backg-success-x: string.unquote("calc(var(--elm-backg-success-c)*(1 - ((((var(--elm-backg-success-h) - (clamp(0,((var(--elm-backg-success-h) - 120)*999) + 1,1) + clamp(0,((var(--elm-backg-success-h) - 240)*999) + 1,1) + clamp(0,((var(--elm-backg-success-h) - 360)*999) + 1,1))*120)/60) - 1)*clamp(-1,(((var(--elm-backg-success-h) - (clamp(0,((var(--elm-backg-success-h) - 120)*999) + 1,1) + clamp(0,((var(--elm-backg-success-h) - 240)*999) + 1,1) + clamp(0,((var(--elm-backg-success-h) - 360)*999) + 1,1))*120)/60) - 1)*999,1))))");
+
+      --elm-backg-success-r: string.unquote("calc(((var(--elm-backg-success-l) - var(--elm-backg-success-c)/2) + (var(--elm-backg-success-c)*clamp(0,clamp(0,((var(--elm-backg-success-h) - 300)*999) + 1,1)*clamp(0,(360 - var(--elm-backg-success-h))*999,1) + clamp(0,((var(--elm-backg-success-h) - 0)*999) + 1,1)*clamp(0,(60 - var(--elm-backg-success-h))*999,1),1)) + (var(--elm-backg-success-x)*clamp(0,clamp(0,((var(--elm-backg-success-h) - 60)*999) + 1,1)*clamp(0,(120 - var(--elm-backg-success-h))*999,1) + clamp(0,((var(--elm-backg-success-h) - 240)*999) + 1,1)*clamp(0,(300 - var(--elm-backg-success-h))*999,1),1)))*255)");
+      --elm-backg-success-g: string.unquote("calc(((var(--elm-backg-success-l) - var(--elm-backg-success-c)/2) + (var(--elm-backg-success-c)*clamp(0,clamp(0,((var(--elm-backg-success-h) - 60)*999) + 1,1)*clamp(0,(120 - var(--elm-backg-success-h))*999,1) + clamp(0,((var(--elm-backg-success-h) - 120)*999) + 1,1)*clamp(0,(180 - var(--elm-backg-success-h))*999,1),1)) + (var(--elm-backg-success-x)*clamp(0,clamp(0,((var(--elm-backg-success-h) - 0)*999) + 1,1)*clamp(0,(60 - var(--elm-backg-success-h))*999,1) + clamp(0,((var(--elm-backg-success-h) - 180)*999) + 1,1)*clamp(0,(240 - var(--elm-backg-success-h))*999,1),1)))*255)");
+      --elm-backg-success-b: string.unquote("calc(((var(--elm-backg-success-l) - var(--elm-backg-success-c)/2) + (var(--elm-backg-success-c)*clamp(0,clamp(0,((var(--elm-backg-success-h) - 180)*999) + 1,1)*clamp(0,(240 - var(--elm-backg-success-h))*999,1) + clamp(0,((var(--elm-backg-success-h) - 240)*999) + 1,1)*clamp(0,(300 - var(--elm-backg-success-h))*999,1),1)) + (var(--elm-backg-success-x)*clamp(0,clamp(0,((var(--elm-backg-success-h) - 300)*999) + 1,1)*clamp(0,(360 - var(--elm-backg-success-h))*999,1) + clamp(0,((var(--elm-backg-success-h) - 120)*999) + 1,1)*clamp(0,(180 - var(--elm-backg-success-h))*999,1),1)))*255)");
+
+  */
+  --elm-color-success-h:var(--elm-backg-success-h);
+  --elm-color-success-s:var(--elm-backg-success-s);
+  --elm-color-success-x:var(--elm-backg-success-l) + (clamp(0, ((var(--elm-backg-success-l) - 0.5) * 1000) + 1, 1) * var(--elm-backg-success-s)) + (var(--elm-backg-success-l) * var(--elm-backg-success-s) * clamp(-1, ((var(--elm-backg-success-l) - 0.5) * -1000) - 1, 1));
+  --elm-color-success-l:clamp(0%, (var(--elm-backg-success-l) - var(--col-contrast-threshold)) * -1000, 100%);
+  --elm-color-success-a: 100%;
+  --elm-color-success:hsla(var(--elm-color-success-h), var(--elm-color-success-s), var(--elm-color-success-l), var(--elm-color-success-a));
+  --elm-backg-info-h: 190.0440528634deg;
+  --elm-backg-info-s: 89.7233201581%;
+  --elm-backg-info-l: 49.6078431373%;
+  --elm-backg-info-a: 1;
+  --elm-backg-info:hsla(var(--elm-backg-info-h), var(--elm-backg-info-s), var(--elm-backg-info-l), var(--elm-backg-info-a));
+  /*
+      https://css-tricks.com/converting-color-spaces-in-javascript/
+
+      c = (1 - Math.abs(2 * l - 1)) * s
+      x = c * (1 - Math.abs(((h / 60%) % 2) - 1))
+      m = l - c/2
+
+
+
+      c = (1 -  abs(2 * l - 1) ) * s
+      c = (1 - [abs(2 * l - 1)]) * s
+      c = (1 - [(2 * l - 1) * clamp(-1, (2 * l - 1) * 999, 1)]) * s
+      --------------------------------------------------------------
+
+
+      x = c * (1 -  abs(((h / 60%) % 2) - 1))
+      x = c * (1 -  abs(((h % 120%) / 60) - 1))
+
+      d = h % 120%
+      d = h - (clamp(0, ((h - 120) * 999) + 1, 1) + clamp(0, ((h - 240) * 999) + 1, 1) + clamp(0, ((h - 360) * 999) + 1, 1)) * 120
+      ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+      x = c * (1 -  abs((d / 60) - 1))
+      x = c * (1 -    [((d / 60) - 1) * clamp(-1, ((d / 60) - 1) * 999, 1)])
+      -----------------------------------------------------------------------
+
+      m = l - c / 2
+      -------------
+
+
+
+
+           if (300 <= h && h < 360) {         clamp(0, ((h - 300) * 999) + 1, 1)  *   clamp(0, (360 - h) * 999, 1)
+          r = c; g = 0; b = x;
+      }
+      else if (0 <= h   && h < 60)  {         clamp(0, ((h - 0) * 999) + 1, 1)    *   clamp(0, (60 - h) * 999, 1)
+          r = c; g = x; b = 0;
+      }
+
+      else if (60 <= h  && h < 120) {         clamp(0, ((h - 60) * 999) + 1, 1)   *   clamp(0, (120 - h) * 999, 1)
+          r = x; g = c; b = 0;
+      }
+      else if (120 <= h && h < 180) {         clamp(0, ((h - 120) * 999) + 1, 1)  *   clamp(0, (180 - h) * 999, 1)
+          r = 0; g = c; b = x;
+      }
+
+      else if (180 <= h && h < 240) {         clamp(0, ((h - 180) * 999) + 1, 1)  *   clamp(0, (240 - h) * 999, 1)
+          r = 0; g = x; b = c;
+      }
+      else if (240 <= h && h < 300) {         clamp(0, ((h - 240) * 999) + 1, 1)  *   clamp(0, (300 - h) * 999, 1)
+          r = x; g = 0; b = c;
+      }
+
+
+      r = m
+          +
+          (c * clamp(0, clamp(0, ((h - 300) * 999) + 1, 1) * clamp(0, (360 - h) * 999, 1) + clamp(0, ((h - 0) * 999) + 1, 1) * clamp(0, (60 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 60) * 999) + 1, 1) * clamp(0, (120 - h) * 999, 1) + clamp(0, ((h - 240) * 999) + 1, 1) * clamp(0, (300 - h) * 999, 1), 1))
+
+      g = m
+          +
+          (c * clamp(0, clamp(0, ((h - 60) * 999) + 1, 1) * clamp(0, (120 - h) * 999, 1) + clamp(0, ((h - 120) * 999) + 1, 1) * clamp(0, (180 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 0) * 999) + 1, 1) * clamp(0, (60 - h) * 999, 1) + clamp(0, ((h - 180) * 999) + 1, 1) * clamp(0, (240 - h) * 999, 1), 1))
+
+      b = m
+          +
+          (c * clamp(0, clamp(0, ((h - 180) * 999) + 1, 1) * clamp(0, (240 - h) * 999, 1) + clamp(0, ((h - 240) * 999) + 1, 1) * clamp(0, (300 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 300) * 999) + 1, 1) * clamp(0, (360 - h) * 999, 1) + clamp(0, ((h - 120) * 999) + 1, 1) * clamp(0, (180 - h) * 999, 1), 1))
+
+  */
+  /*
+      c: (1 - ((2*l - 1)*clamp(-1,(2*l - 1)*999,1)))*s;
+      d: h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120;
+
+      x: c*(1 - (((d/60) - 1)*clamp(-1,((d/60) - 1)*999,1)));
+      (with d) x: c*(1 - ((((h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120)/60) - 1)*clamp(-1,(((h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120)/60) - 1)*999,1)));
+
+      m: l - c/2;
+      r: (m + (c*clamp(0,clamp(0,((h - 300)*999) + 1,1)*clamp(0,(360 - h)*999,1) + clamp(0,((h - 0)*999) + 1,1)*clamp(0,(60 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 60)*999) + 1,1)*clamp(0,(120 - h)*999,1) + clamp(0,((h - 240)*999) + 1,1)*clamp(0,(300 - h)*999,1),1)))*255;
+      g: (m + (c*clamp(0,clamp(0,((h - 60)*999) + 1,1)*clamp(0,(120 - h)*999,1) + clamp(0,((h - 120)*999) + 1,1)*clamp(0,(180 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 0)*999) + 1,1)*clamp(0,(60 - h)*999,1) + clamp(0,((h - 180)*999) + 1,1)*clamp(0,(240 - h)*999,1),1)))*255;
+      b: (m + (c*clamp(0,clamp(0,((h - 180)*999) + 1,1)*clamp(0,(240 - h)*999,1) + clamp(0,((h - 240)*999) + 1,1)*clamp(0,(300 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 300)*999) + 1,1)*clamp(0,(360 - h)*999,1) + clamp(0,((h - 120)*999) + 1,1)*clamp(0,(180 - h)*999,1),1)))*255;
+  */
+  /*
+
+      --elm-backg-info-c: string.unquote("calc((1 - ((2*var(--elm-backg-info-l) - 1)*clamp(-1,(2*var(--elm-backg-info-l) - 1)*999,1)))*var(--elm-backg-info-s))");
+      --elm-backg-info-x: string.unquote("calc(var(--elm-backg-info-c)*(1 - ((((var(--elm-backg-info-h) - (clamp(0,((var(--elm-backg-info-h) - 120)*999) + 1,1) + clamp(0,((var(--elm-backg-info-h) - 240)*999) + 1,1) + clamp(0,((var(--elm-backg-info-h) - 360)*999) + 1,1))*120)/60) - 1)*clamp(-1,(((var(--elm-backg-info-h) - (clamp(0,((var(--elm-backg-info-h) - 120)*999) + 1,1) + clamp(0,((var(--elm-backg-info-h) - 240)*999) + 1,1) + clamp(0,((var(--elm-backg-info-h) - 360)*999) + 1,1))*120)/60) - 1)*999,1))))");
+
+      --elm-backg-info-r: string.unquote("calc(((var(--elm-backg-info-l) - var(--elm-backg-info-c)/2) + (var(--elm-backg-info-c)*clamp(0,clamp(0,((var(--elm-backg-info-h) - 300)*999) + 1,1)*clamp(0,(360 - var(--elm-backg-info-h))*999,1) + clamp(0,((var(--elm-backg-info-h) - 0)*999) + 1,1)*clamp(0,(60 - var(--elm-backg-info-h))*999,1),1)) + (var(--elm-backg-info-x)*clamp(0,clamp(0,((var(--elm-backg-info-h) - 60)*999) + 1,1)*clamp(0,(120 - var(--elm-backg-info-h))*999,1) + clamp(0,((var(--elm-backg-info-h) - 240)*999) + 1,1)*clamp(0,(300 - var(--elm-backg-info-h))*999,1),1)))*255)");
+      --elm-backg-info-g: string.unquote("calc(((var(--elm-backg-info-l) - var(--elm-backg-info-c)/2) + (var(--elm-backg-info-c)*clamp(0,clamp(0,((var(--elm-backg-info-h) - 60)*999) + 1,1)*clamp(0,(120 - var(--elm-backg-info-h))*999,1) + clamp(0,((var(--elm-backg-info-h) - 120)*999) + 1,1)*clamp(0,(180 - var(--elm-backg-info-h))*999,1),1)) + (var(--elm-backg-info-x)*clamp(0,clamp(0,((var(--elm-backg-info-h) - 0)*999) + 1,1)*clamp(0,(60 - var(--elm-backg-info-h))*999,1) + clamp(0,((var(--elm-backg-info-h) - 180)*999) + 1,1)*clamp(0,(240 - var(--elm-backg-info-h))*999,1),1)))*255)");
+      --elm-backg-info-b: string.unquote("calc(((var(--elm-backg-info-l) - var(--elm-backg-info-c)/2) + (var(--elm-backg-info-c)*clamp(0,clamp(0,((var(--elm-backg-info-h) - 180)*999) + 1,1)*clamp(0,(240 - var(--elm-backg-info-h))*999,1) + clamp(0,((var(--elm-backg-info-h) - 240)*999) + 1,1)*clamp(0,(300 - var(--elm-backg-info-h))*999,1),1)) + (var(--elm-backg-info-x)*clamp(0,clamp(0,((var(--elm-backg-info-h) - 300)*999) + 1,1)*clamp(0,(360 - var(--elm-backg-info-h))*999,1) + clamp(0,((var(--elm-backg-info-h) - 120)*999) + 1,1)*clamp(0,(180 - var(--elm-backg-info-h))*999,1),1)))*255)");
+
+  */
+  --elm-color-info-h:var(--elm-backg-info-h);
+  --elm-color-info-s:var(--elm-backg-info-s);
+  --elm-color-info-x:var(--elm-backg-info-l) + (clamp(0, ((var(--elm-backg-info-l) - 0.5) * 1000) + 1, 1) * var(--elm-backg-info-s)) + (var(--elm-backg-info-l) * var(--elm-backg-info-s) * clamp(-1, ((var(--elm-backg-info-l) - 0.5) * -1000) - 1, 1));
+  --elm-color-info-l:clamp(0%, (var(--elm-backg-info-l) - var(--col-contrast-threshold)) * -1000, 100%);
+  --elm-color-info-a: 100%;
+  --elm-color-info:hsla(var(--elm-color-info-h), var(--elm-color-info-s), var(--elm-color-info-l), var(--elm-color-info-a));
+  --elm-backg-warning-h: 45deg;
+  --elm-backg-warning-s: 100%;
+  --elm-backg-warning-l: 51.3725490196%;
+  --elm-backg-warning-a: 1;
+  --elm-backg-warning:hsla(var(--elm-backg-warning-h), var(--elm-backg-warning-s), var(--elm-backg-warning-l), var(--elm-backg-warning-a));
+  /*
+      https://css-tricks.com/converting-color-spaces-in-javascript/
+
+      c = (1 - Math.abs(2 * l - 1)) * s
+      x = c * (1 - Math.abs(((h / 60%) % 2) - 1))
+      m = l - c/2
+
+
+
+      c = (1 -  abs(2 * l - 1) ) * s
+      c = (1 - [abs(2 * l - 1)]) * s
+      c = (1 - [(2 * l - 1) * clamp(-1, (2 * l - 1) * 999, 1)]) * s
+      --------------------------------------------------------------
+
+
+      x = c * (1 -  abs(((h / 60%) % 2) - 1))
+      x = c * (1 -  abs(((h % 120%) / 60) - 1))
+
+      d = h % 120%
+      d = h - (clamp(0, ((h - 120) * 999) + 1, 1) + clamp(0, ((h - 240) * 999) + 1, 1) + clamp(0, ((h - 360) * 999) + 1, 1)) * 120
+      ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+      x = c * (1 -  abs((d / 60) - 1))
+      x = c * (1 -    [((d / 60) - 1) * clamp(-1, ((d / 60) - 1) * 999, 1)])
+      -----------------------------------------------------------------------
+
+      m = l - c / 2
+      -------------
+
+
+
+
+           if (300 <= h && h < 360) {         clamp(0, ((h - 300) * 999) + 1, 1)  *   clamp(0, (360 - h) * 999, 1)
+          r = c; g = 0; b = x;
+      }
+      else if (0 <= h   && h < 60)  {         clamp(0, ((h - 0) * 999) + 1, 1)    *   clamp(0, (60 - h) * 999, 1)
+          r = c; g = x; b = 0;
+      }
+
+      else if (60 <= h  && h < 120) {         clamp(0, ((h - 60) * 999) + 1, 1)   *   clamp(0, (120 - h) * 999, 1)
+          r = x; g = c; b = 0;
+      }
+      else if (120 <= h && h < 180) {         clamp(0, ((h - 120) * 999) + 1, 1)  *   clamp(0, (180 - h) * 999, 1)
+          r = 0; g = c; b = x;
+      }
+
+      else if (180 <= h && h < 240) {         clamp(0, ((h - 180) * 999) + 1, 1)  *   clamp(0, (240 - h) * 999, 1)
+          r = 0; g = x; b = c;
+      }
+      else if (240 <= h && h < 300) {         clamp(0, ((h - 240) * 999) + 1, 1)  *   clamp(0, (300 - h) * 999, 1)
+          r = x; g = 0; b = c;
+      }
+
+
+      r = m
+          +
+          (c * clamp(0, clamp(0, ((h - 300) * 999) + 1, 1) * clamp(0, (360 - h) * 999, 1) + clamp(0, ((h - 0) * 999) + 1, 1) * clamp(0, (60 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 60) * 999) + 1, 1) * clamp(0, (120 - h) * 999, 1) + clamp(0, ((h - 240) * 999) + 1, 1) * clamp(0, (300 - h) * 999, 1), 1))
+
+      g = m
+          +
+          (c * clamp(0, clamp(0, ((h - 60) * 999) + 1, 1) * clamp(0, (120 - h) * 999, 1) + clamp(0, ((h - 120) * 999) + 1, 1) * clamp(0, (180 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 0) * 999) + 1, 1) * clamp(0, (60 - h) * 999, 1) + clamp(0, ((h - 180) * 999) + 1, 1) * clamp(0, (240 - h) * 999, 1), 1))
+
+      b = m
+          +
+          (c * clamp(0, clamp(0, ((h - 180) * 999) + 1, 1) * clamp(0, (240 - h) * 999, 1) + clamp(0, ((h - 240) * 999) + 1, 1) * clamp(0, (300 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 300) * 999) + 1, 1) * clamp(0, (360 - h) * 999, 1) + clamp(0, ((h - 120) * 999) + 1, 1) * clamp(0, (180 - h) * 999, 1), 1))
+
+  */
+  /*
+      c: (1 - ((2*l - 1)*clamp(-1,(2*l - 1)*999,1)))*s;
+      d: h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120;
+
+      x: c*(1 - (((d/60) - 1)*clamp(-1,((d/60) - 1)*999,1)));
+      (with d) x: c*(1 - ((((h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120)/60) - 1)*clamp(-1,(((h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120)/60) - 1)*999,1)));
+
+      m: l - c/2;
+      r: (m + (c*clamp(0,clamp(0,((h - 300)*999) + 1,1)*clamp(0,(360 - h)*999,1) + clamp(0,((h - 0)*999) + 1,1)*clamp(0,(60 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 60)*999) + 1,1)*clamp(0,(120 - h)*999,1) + clamp(0,((h - 240)*999) + 1,1)*clamp(0,(300 - h)*999,1),1)))*255;
+      g: (m + (c*clamp(0,clamp(0,((h - 60)*999) + 1,1)*clamp(0,(120 - h)*999,1) + clamp(0,((h - 120)*999) + 1,1)*clamp(0,(180 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 0)*999) + 1,1)*clamp(0,(60 - h)*999,1) + clamp(0,((h - 180)*999) + 1,1)*clamp(0,(240 - h)*999,1),1)))*255;
+      b: (m + (c*clamp(0,clamp(0,((h - 180)*999) + 1,1)*clamp(0,(240 - h)*999,1) + clamp(0,((h - 240)*999) + 1,1)*clamp(0,(300 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 300)*999) + 1,1)*clamp(0,(360 - h)*999,1) + clamp(0,((h - 120)*999) + 1,1)*clamp(0,(180 - h)*999,1),1)))*255;
+  */
+  /*
+
+      --elm-backg-warning-c: string.unquote("calc((1 - ((2*var(--elm-backg-warning-l) - 1)*clamp(-1,(2*var(--elm-backg-warning-l) - 1)*999,1)))*var(--elm-backg-warning-s))");
+      --elm-backg-warning-x: string.unquote("calc(var(--elm-backg-warning-c)*(1 - ((((var(--elm-backg-warning-h) - (clamp(0,((var(--elm-backg-warning-h) - 120)*999) + 1,1) + clamp(0,((var(--elm-backg-warning-h) - 240)*999) + 1,1) + clamp(0,((var(--elm-backg-warning-h) - 360)*999) + 1,1))*120)/60) - 1)*clamp(-1,(((var(--elm-backg-warning-h) - (clamp(0,((var(--elm-backg-warning-h) - 120)*999) + 1,1) + clamp(0,((var(--elm-backg-warning-h) - 240)*999) + 1,1) + clamp(0,((var(--elm-backg-warning-h) - 360)*999) + 1,1))*120)/60) - 1)*999,1))))");
+
+      --elm-backg-warning-r: string.unquote("calc(((var(--elm-backg-warning-l) - var(--elm-backg-warning-c)/2) + (var(--elm-backg-warning-c)*clamp(0,clamp(0,((var(--elm-backg-warning-h) - 300)*999) + 1,1)*clamp(0,(360 - var(--elm-backg-warning-h))*999,1) + clamp(0,((var(--elm-backg-warning-h) - 0)*999) + 1,1)*clamp(0,(60 - var(--elm-backg-warning-h))*999,1),1)) + (var(--elm-backg-warning-x)*clamp(0,clamp(0,((var(--elm-backg-warning-h) - 60)*999) + 1,1)*clamp(0,(120 - var(--elm-backg-warning-h))*999,1) + clamp(0,((var(--elm-backg-warning-h) - 240)*999) + 1,1)*clamp(0,(300 - var(--elm-backg-warning-h))*999,1),1)))*255)");
+      --elm-backg-warning-g: string.unquote("calc(((var(--elm-backg-warning-l) - var(--elm-backg-warning-c)/2) + (var(--elm-backg-warning-c)*clamp(0,clamp(0,((var(--elm-backg-warning-h) - 60)*999) + 1,1)*clamp(0,(120 - var(--elm-backg-warning-h))*999,1) + clamp(0,((var(--elm-backg-warning-h) - 120)*999) + 1,1)*clamp(0,(180 - var(--elm-backg-warning-h))*999,1),1)) + (var(--elm-backg-warning-x)*clamp(0,clamp(0,((var(--elm-backg-warning-h) - 0)*999) + 1,1)*clamp(0,(60 - var(--elm-backg-warning-h))*999,1) + clamp(0,((var(--elm-backg-warning-h) - 180)*999) + 1,1)*clamp(0,(240 - var(--elm-backg-warning-h))*999,1),1)))*255)");
+      --elm-backg-warning-b: string.unquote("calc(((var(--elm-backg-warning-l) - var(--elm-backg-warning-c)/2) + (var(--elm-backg-warning-c)*clamp(0,clamp(0,((var(--elm-backg-warning-h) - 180)*999) + 1,1)*clamp(0,(240 - var(--elm-backg-warning-h))*999,1) + clamp(0,((var(--elm-backg-warning-h) - 240)*999) + 1,1)*clamp(0,(300 - var(--elm-backg-warning-h))*999,1),1)) + (var(--elm-backg-warning-x)*clamp(0,clamp(0,((var(--elm-backg-warning-h) - 300)*999) + 1,1)*clamp(0,(360 - var(--elm-backg-warning-h))*999,1) + clamp(0,((var(--elm-backg-warning-h) - 120)*999) + 1,1)*clamp(0,(180 - var(--elm-backg-warning-h))*999,1),1)))*255)");
+
+  */
+  --elm-color-warning-h:var(--elm-backg-warning-h);
+  --elm-color-warning-s:var(--elm-backg-warning-s);
+  --elm-color-warning-x:var(--elm-backg-warning-l) + (clamp(0, ((var(--elm-backg-warning-l) - 0.5) * 1000) + 1, 1) * var(--elm-backg-warning-s)) + (var(--elm-backg-warning-l) * var(--elm-backg-warning-s) * clamp(-1, ((var(--elm-backg-warning-l) - 0.5) * -1000) - 1, 1));
+  --elm-color-warning-l:clamp(0%, (var(--elm-backg-warning-l) - var(--col-contrast-threshold)) * -1000, 100%);
+  --elm-color-warning-a: 100%;
+  --elm-color-warning:hsla(var(--elm-color-warning-h), var(--elm-color-warning-s), var(--elm-color-warning-l), var(--elm-color-warning-a));
+  --elm-backg-danger-h: 354.251497006deg;
+  --elm-backg-danger-s: 70.4641350211%;
+  --elm-backg-danger-l: 53.5294117647%;
+  --elm-backg-danger-a: 1;
+  --elm-backg-danger:hsla(var(--elm-backg-danger-h), var(--elm-backg-danger-s), var(--elm-backg-danger-l), var(--elm-backg-danger-a));
+  /*
+      https://css-tricks.com/converting-color-spaces-in-javascript/
+
+      c = (1 - Math.abs(2 * l - 1)) * s
+      x = c * (1 - Math.abs(((h / 60%) % 2) - 1))
+      m = l - c/2
+
+
+
+      c = (1 -  abs(2 * l - 1) ) * s
+      c = (1 - [abs(2 * l - 1)]) * s
+      c = (1 - [(2 * l - 1) * clamp(-1, (2 * l - 1) * 999, 1)]) * s
+      --------------------------------------------------------------
+
+
+      x = c * (1 -  abs(((h / 60%) % 2) - 1))
+      x = c * (1 -  abs(((h % 120%) / 60) - 1))
+
+      d = h % 120%
+      d = h - (clamp(0, ((h - 120) * 999) + 1, 1) + clamp(0, ((h - 240) * 999) + 1, 1) + clamp(0, ((h - 360) * 999) + 1, 1)) * 120
+      ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+      x = c * (1 -  abs((d / 60) - 1))
+      x = c * (1 -    [((d / 60) - 1) * clamp(-1, ((d / 60) - 1) * 999, 1)])
+      -----------------------------------------------------------------------
+
+      m = l - c / 2
+      -------------
+
+
+
+
+           if (300 <= h && h < 360) {         clamp(0, ((h - 300) * 999) + 1, 1)  *   clamp(0, (360 - h) * 999, 1)
+          r = c; g = 0; b = x;
+      }
+      else if (0 <= h   && h < 60)  {         clamp(0, ((h - 0) * 999) + 1, 1)    *   clamp(0, (60 - h) * 999, 1)
+          r = c; g = x; b = 0;
+      }
+
+      else if (60 <= h  && h < 120) {         clamp(0, ((h - 60) * 999) + 1, 1)   *   clamp(0, (120 - h) * 999, 1)
+          r = x; g = c; b = 0;
+      }
+      else if (120 <= h && h < 180) {         clamp(0, ((h - 120) * 999) + 1, 1)  *   clamp(0, (180 - h) * 999, 1)
+          r = 0; g = c; b = x;
+      }
+
+      else if (180 <= h && h < 240) {         clamp(0, ((h - 180) * 999) + 1, 1)  *   clamp(0, (240 - h) * 999, 1)
+          r = 0; g = x; b = c;
+      }
+      else if (240 <= h && h < 300) {         clamp(0, ((h - 240) * 999) + 1, 1)  *   clamp(0, (300 - h) * 999, 1)
+          r = x; g = 0; b = c;
+      }
+
+
+      r = m
+          +
+          (c * clamp(0, clamp(0, ((h - 300) * 999) + 1, 1) * clamp(0, (360 - h) * 999, 1) + clamp(0, ((h - 0) * 999) + 1, 1) * clamp(0, (60 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 60) * 999) + 1, 1) * clamp(0, (120 - h) * 999, 1) + clamp(0, ((h - 240) * 999) + 1, 1) * clamp(0, (300 - h) * 999, 1), 1))
+
+      g = m
+          +
+          (c * clamp(0, clamp(0, ((h - 60) * 999) + 1, 1) * clamp(0, (120 - h) * 999, 1) + clamp(0, ((h - 120) * 999) + 1, 1) * clamp(0, (180 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 0) * 999) + 1, 1) * clamp(0, (60 - h) * 999, 1) + clamp(0, ((h - 180) * 999) + 1, 1) * clamp(0, (240 - h) * 999, 1), 1))
+
+      b = m
+          +
+          (c * clamp(0, clamp(0, ((h - 180) * 999) + 1, 1) * clamp(0, (240 - h) * 999, 1) + clamp(0, ((h - 240) * 999) + 1, 1) * clamp(0, (300 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 300) * 999) + 1, 1) * clamp(0, (360 - h) * 999, 1) + clamp(0, ((h - 120) * 999) + 1, 1) * clamp(0, (180 - h) * 999, 1), 1))
+
+  */
+  /*
+      c: (1 - ((2*l - 1)*clamp(-1,(2*l - 1)*999,1)))*s;
+      d: h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120;
+
+      x: c*(1 - (((d/60) - 1)*clamp(-1,((d/60) - 1)*999,1)));
+      (with d) x: c*(1 - ((((h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120)/60) - 1)*clamp(-1,(((h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120)/60) - 1)*999,1)));
+
+      m: l - c/2;
+      r: (m + (c*clamp(0,clamp(0,((h - 300)*999) + 1,1)*clamp(0,(360 - h)*999,1) + clamp(0,((h - 0)*999) + 1,1)*clamp(0,(60 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 60)*999) + 1,1)*clamp(0,(120 - h)*999,1) + clamp(0,((h - 240)*999) + 1,1)*clamp(0,(300 - h)*999,1),1)))*255;
+      g: (m + (c*clamp(0,clamp(0,((h - 60)*999) + 1,1)*clamp(0,(120 - h)*999,1) + clamp(0,((h - 120)*999) + 1,1)*clamp(0,(180 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 0)*999) + 1,1)*clamp(0,(60 - h)*999,1) + clamp(0,((h - 180)*999) + 1,1)*clamp(0,(240 - h)*999,1),1)))*255;
+      b: (m + (c*clamp(0,clamp(0,((h - 180)*999) + 1,1)*clamp(0,(240 - h)*999,1) + clamp(0,((h - 240)*999) + 1,1)*clamp(0,(300 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 300)*999) + 1,1)*clamp(0,(360 - h)*999,1) + clamp(0,((h - 120)*999) + 1,1)*clamp(0,(180 - h)*999,1),1)))*255;
+  */
+  /*
+
+      --elm-backg-danger-c: string.unquote("calc((1 - ((2*var(--elm-backg-danger-l) - 1)*clamp(-1,(2*var(--elm-backg-danger-l) - 1)*999,1)))*var(--elm-backg-danger-s))");
+      --elm-backg-danger-x: string.unquote("calc(var(--elm-backg-danger-c)*(1 - ((((var(--elm-backg-danger-h) - (clamp(0,((var(--elm-backg-danger-h) - 120)*999) + 1,1) + clamp(0,((var(--elm-backg-danger-h) - 240)*999) + 1,1) + clamp(0,((var(--elm-backg-danger-h) - 360)*999) + 1,1))*120)/60) - 1)*clamp(-1,(((var(--elm-backg-danger-h) - (clamp(0,((var(--elm-backg-danger-h) - 120)*999) + 1,1) + clamp(0,((var(--elm-backg-danger-h) - 240)*999) + 1,1) + clamp(0,((var(--elm-backg-danger-h) - 360)*999) + 1,1))*120)/60) - 1)*999,1))))");
+
+      --elm-backg-danger-r: string.unquote("calc(((var(--elm-backg-danger-l) - var(--elm-backg-danger-c)/2) + (var(--elm-backg-danger-c)*clamp(0,clamp(0,((var(--elm-backg-danger-h) - 300)*999) + 1,1)*clamp(0,(360 - var(--elm-backg-danger-h))*999,1) + clamp(0,((var(--elm-backg-danger-h) - 0)*999) + 1,1)*clamp(0,(60 - var(--elm-backg-danger-h))*999,1),1)) + (var(--elm-backg-danger-x)*clamp(0,clamp(0,((var(--elm-backg-danger-h) - 60)*999) + 1,1)*clamp(0,(120 - var(--elm-backg-danger-h))*999,1) + clamp(0,((var(--elm-backg-danger-h) - 240)*999) + 1,1)*clamp(0,(300 - var(--elm-backg-danger-h))*999,1),1)))*255)");
+      --elm-backg-danger-g: string.unquote("calc(((var(--elm-backg-danger-l) - var(--elm-backg-danger-c)/2) + (var(--elm-backg-danger-c)*clamp(0,clamp(0,((var(--elm-backg-danger-h) - 60)*999) + 1,1)*clamp(0,(120 - var(--elm-backg-danger-h))*999,1) + clamp(0,((var(--elm-backg-danger-h) - 120)*999) + 1,1)*clamp(0,(180 - var(--elm-backg-danger-h))*999,1),1)) + (var(--elm-backg-danger-x)*clamp(0,clamp(0,((var(--elm-backg-danger-h) - 0)*999) + 1,1)*clamp(0,(60 - var(--elm-backg-danger-h))*999,1) + clamp(0,((var(--elm-backg-danger-h) - 180)*999) + 1,1)*clamp(0,(240 - var(--elm-backg-danger-h))*999,1),1)))*255)");
+      --elm-backg-danger-b: string.unquote("calc(((var(--elm-backg-danger-l) - var(--elm-backg-danger-c)/2) + (var(--elm-backg-danger-c)*clamp(0,clamp(0,((var(--elm-backg-danger-h) - 180)*999) + 1,1)*clamp(0,(240 - var(--elm-backg-danger-h))*999,1) + clamp(0,((var(--elm-backg-danger-h) - 240)*999) + 1,1)*clamp(0,(300 - var(--elm-backg-danger-h))*999,1),1)) + (var(--elm-backg-danger-x)*clamp(0,clamp(0,((var(--elm-backg-danger-h) - 300)*999) + 1,1)*clamp(0,(360 - var(--elm-backg-danger-h))*999,1) + clamp(0,((var(--elm-backg-danger-h) - 120)*999) + 1,1)*clamp(0,(180 - var(--elm-backg-danger-h))*999,1),1)))*255)");
+
+  */
+  --elm-color-danger-h:var(--elm-backg-danger-h);
+  --elm-color-danger-s:var(--elm-backg-danger-s);
+  --elm-color-danger-x:var(--elm-backg-danger-l) + (clamp(0, ((var(--elm-backg-danger-l) - 0.5) * 1000) + 1, 1) * var(--elm-backg-danger-s)) + (var(--elm-backg-danger-l) * var(--elm-backg-danger-s) * clamp(-1, ((var(--elm-backg-danger-l) - 0.5) * -1000) - 1, 1));
+  --elm-color-danger-l:clamp(0%, (var(--elm-backg-danger-l) - var(--col-contrast-threshold)) * -1000, 100%);
+  --elm-color-danger-a: 100%;
+  --elm-color-danger:hsla(var(--elm-color-danger-h), var(--elm-color-danger-s), var(--elm-color-danger-l), var(--elm-color-danger-a));
+  --elm-backg-light-h: 210deg;
+  --elm-backg-light-s: 16.6666666667%;
+  --elm-backg-light-l: 97.6470588235%;
+  --elm-backg-light-a: 1;
+  --elm-backg-light:hsla(var(--elm-backg-light-h), var(--elm-backg-light-s), var(--elm-backg-light-l), var(--elm-backg-light-a));
+  /*
+      https://css-tricks.com/converting-color-spaces-in-javascript/
+
+      c = (1 - Math.abs(2 * l - 1)) * s
+      x = c * (1 - Math.abs(((h / 60%) % 2) - 1))
+      m = l - c/2
+
+
+
+      c = (1 -  abs(2 * l - 1) ) * s
+      c = (1 - [abs(2 * l - 1)]) * s
+      c = (1 - [(2 * l - 1) * clamp(-1, (2 * l - 1) * 999, 1)]) * s
+      --------------------------------------------------------------
+
+
+      x = c * (1 -  abs(((h / 60%) % 2) - 1))
+      x = c * (1 -  abs(((h % 120%) / 60) - 1))
+
+      d = h % 120%
+      d = h - (clamp(0, ((h - 120) * 999) + 1, 1) + clamp(0, ((h - 240) * 999) + 1, 1) + clamp(0, ((h - 360) * 999) + 1, 1)) * 120
+      ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+      x = c * (1 -  abs((d / 60) - 1))
+      x = c * (1 -    [((d / 60) - 1) * clamp(-1, ((d / 60) - 1) * 999, 1)])
+      -----------------------------------------------------------------------
+
+      m = l - c / 2
+      -------------
+
+
+
+
+           if (300 <= h && h < 360) {         clamp(0, ((h - 300) * 999) + 1, 1)  *   clamp(0, (360 - h) * 999, 1)
+          r = c; g = 0; b = x;
+      }
+      else if (0 <= h   && h < 60)  {         clamp(0, ((h - 0) * 999) + 1, 1)    *   clamp(0, (60 - h) * 999, 1)
+          r = c; g = x; b = 0;
+      }
+
+      else if (60 <= h  && h < 120) {         clamp(0, ((h - 60) * 999) + 1, 1)   *   clamp(0, (120 - h) * 999, 1)
+          r = x; g = c; b = 0;
+      }
+      else if (120 <= h && h < 180) {         clamp(0, ((h - 120) * 999) + 1, 1)  *   clamp(0, (180 - h) * 999, 1)
+          r = 0; g = c; b = x;
+      }
+
+      else if (180 <= h && h < 240) {         clamp(0, ((h - 180) * 999) + 1, 1)  *   clamp(0, (240 - h) * 999, 1)
+          r = 0; g = x; b = c;
+      }
+      else if (240 <= h && h < 300) {         clamp(0, ((h - 240) * 999) + 1, 1)  *   clamp(0, (300 - h) * 999, 1)
+          r = x; g = 0; b = c;
+      }
+
+
+      r = m
+          +
+          (c * clamp(0, clamp(0, ((h - 300) * 999) + 1, 1) * clamp(0, (360 - h) * 999, 1) + clamp(0, ((h - 0) * 999) + 1, 1) * clamp(0, (60 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 60) * 999) + 1, 1) * clamp(0, (120 - h) * 999, 1) + clamp(0, ((h - 240) * 999) + 1, 1) * clamp(0, (300 - h) * 999, 1), 1))
+
+      g = m
+          +
+          (c * clamp(0, clamp(0, ((h - 60) * 999) + 1, 1) * clamp(0, (120 - h) * 999, 1) + clamp(0, ((h - 120) * 999) + 1, 1) * clamp(0, (180 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 0) * 999) + 1, 1) * clamp(0, (60 - h) * 999, 1) + clamp(0, ((h - 180) * 999) + 1, 1) * clamp(0, (240 - h) * 999, 1), 1))
+
+      b = m
+          +
+          (c * clamp(0, clamp(0, ((h - 180) * 999) + 1, 1) * clamp(0, (240 - h) * 999, 1) + clamp(0, ((h - 240) * 999) + 1, 1) * clamp(0, (300 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 300) * 999) + 1, 1) * clamp(0, (360 - h) * 999, 1) + clamp(0, ((h - 120) * 999) + 1, 1) * clamp(0, (180 - h) * 999, 1), 1))
+
+  */
+  /*
+      c: (1 - ((2*l - 1)*clamp(-1,(2*l - 1)*999,1)))*s;
+      d: h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120;
+
+      x: c*(1 - (((d/60) - 1)*clamp(-1,((d/60) - 1)*999,1)));
+      (with d) x: c*(1 - ((((h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120)/60) - 1)*clamp(-1,(((h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120)/60) - 1)*999,1)));
+
+      m: l - c/2;
+      r: (m + (c*clamp(0,clamp(0,((h - 300)*999) + 1,1)*clamp(0,(360 - h)*999,1) + clamp(0,((h - 0)*999) + 1,1)*clamp(0,(60 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 60)*999) + 1,1)*clamp(0,(120 - h)*999,1) + clamp(0,((h - 240)*999) + 1,1)*clamp(0,(300 - h)*999,1),1)))*255;
+      g: (m + (c*clamp(0,clamp(0,((h - 60)*999) + 1,1)*clamp(0,(120 - h)*999,1) + clamp(0,((h - 120)*999) + 1,1)*clamp(0,(180 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 0)*999) + 1,1)*clamp(0,(60 - h)*999,1) + clamp(0,((h - 180)*999) + 1,1)*clamp(0,(240 - h)*999,1),1)))*255;
+      b: (m + (c*clamp(0,clamp(0,((h - 180)*999) + 1,1)*clamp(0,(240 - h)*999,1) + clamp(0,((h - 240)*999) + 1,1)*clamp(0,(300 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 300)*999) + 1,1)*clamp(0,(360 - h)*999,1) + clamp(0,((h - 120)*999) + 1,1)*clamp(0,(180 - h)*999,1),1)))*255;
+  */
+  /*
+
+      --elm-backg-light-c: string.unquote("calc((1 - ((2*var(--elm-backg-light-l) - 1)*clamp(-1,(2*var(--elm-backg-light-l) - 1)*999,1)))*var(--elm-backg-light-s))");
+      --elm-backg-light-x: string.unquote("calc(var(--elm-backg-light-c)*(1 - ((((var(--elm-backg-light-h) - (clamp(0,((var(--elm-backg-light-h) - 120)*999) + 1,1) + clamp(0,((var(--elm-backg-light-h) - 240)*999) + 1,1) + clamp(0,((var(--elm-backg-light-h) - 360)*999) + 1,1))*120)/60) - 1)*clamp(-1,(((var(--elm-backg-light-h) - (clamp(0,((var(--elm-backg-light-h) - 120)*999) + 1,1) + clamp(0,((var(--elm-backg-light-h) - 240)*999) + 1,1) + clamp(0,((var(--elm-backg-light-h) - 360)*999) + 1,1))*120)/60) - 1)*999,1))))");
+
+      --elm-backg-light-r: string.unquote("calc(((var(--elm-backg-light-l) - var(--elm-backg-light-c)/2) + (var(--elm-backg-light-c)*clamp(0,clamp(0,((var(--elm-backg-light-h) - 300)*999) + 1,1)*clamp(0,(360 - var(--elm-backg-light-h))*999,1) + clamp(0,((var(--elm-backg-light-h) - 0)*999) + 1,1)*clamp(0,(60 - var(--elm-backg-light-h))*999,1),1)) + (var(--elm-backg-light-x)*clamp(0,clamp(0,((var(--elm-backg-light-h) - 60)*999) + 1,1)*clamp(0,(120 - var(--elm-backg-light-h))*999,1) + clamp(0,((var(--elm-backg-light-h) - 240)*999) + 1,1)*clamp(0,(300 - var(--elm-backg-light-h))*999,1),1)))*255)");
+      --elm-backg-light-g: string.unquote("calc(((var(--elm-backg-light-l) - var(--elm-backg-light-c)/2) + (var(--elm-backg-light-c)*clamp(0,clamp(0,((var(--elm-backg-light-h) - 60)*999) + 1,1)*clamp(0,(120 - var(--elm-backg-light-h))*999,1) + clamp(0,((var(--elm-backg-light-h) - 120)*999) + 1,1)*clamp(0,(180 - var(--elm-backg-light-h))*999,1),1)) + (var(--elm-backg-light-x)*clamp(0,clamp(0,((var(--elm-backg-light-h) - 0)*999) + 1,1)*clamp(0,(60 - var(--elm-backg-light-h))*999,1) + clamp(0,((var(--elm-backg-light-h) - 180)*999) + 1,1)*clamp(0,(240 - var(--elm-backg-light-h))*999,1),1)))*255)");
+      --elm-backg-light-b: string.unquote("calc(((var(--elm-backg-light-l) - var(--elm-backg-light-c)/2) + (var(--elm-backg-light-c)*clamp(0,clamp(0,((var(--elm-backg-light-h) - 180)*999) + 1,1)*clamp(0,(240 - var(--elm-backg-light-h))*999,1) + clamp(0,((var(--elm-backg-light-h) - 240)*999) + 1,1)*clamp(0,(300 - var(--elm-backg-light-h))*999,1),1)) + (var(--elm-backg-light-x)*clamp(0,clamp(0,((var(--elm-backg-light-h) - 300)*999) + 1,1)*clamp(0,(360 - var(--elm-backg-light-h))*999,1) + clamp(0,((var(--elm-backg-light-h) - 120)*999) + 1,1)*clamp(0,(180 - var(--elm-backg-light-h))*999,1),1)))*255)");
+
+  */
+  --elm-color-light-h:var(--elm-backg-light-h);
+  --elm-color-light-s:var(--elm-backg-light-s);
+  --elm-color-light-x:var(--elm-backg-light-l) + (clamp(0, ((var(--elm-backg-light-l) - 0.5) * 1000) + 1, 1) * var(--elm-backg-light-s)) + (var(--elm-backg-light-l) * var(--elm-backg-light-s) * clamp(-1, ((var(--elm-backg-light-l) - 0.5) * -1000) - 1, 1));
+  --elm-color-light-l:clamp(0%, (var(--elm-backg-light-l) - var(--col-contrast-threshold)) * -1000, 100%);
+  --elm-color-light-a: 100%;
+  --elm-color-light:hsla(var(--elm-color-light-h), var(--elm-color-light-s), var(--elm-color-light-l), var(--elm-color-light-a));
+  --elm-backg-dark-h: 210deg;
+  --elm-backg-dark-s: 10.8108108108%;
+  --elm-backg-dark-l: 14.5098039216%;
+  --elm-backg-dark-a: 1;
+  --elm-backg-dark:hsla(var(--elm-backg-dark-h), var(--elm-backg-dark-s), var(--elm-backg-dark-l), var(--elm-backg-dark-a));
+  /*
+      https://css-tricks.com/converting-color-spaces-in-javascript/
+
+      c = (1 - Math.abs(2 * l - 1)) * s
+      x = c * (1 - Math.abs(((h / 60%) % 2) - 1))
+      m = l - c/2
+
+
+
+      c = (1 -  abs(2 * l - 1) ) * s
+      c = (1 - [abs(2 * l - 1)]) * s
+      c = (1 - [(2 * l - 1) * clamp(-1, (2 * l - 1) * 999, 1)]) * s
+      --------------------------------------------------------------
+
+
+      x = c * (1 -  abs(((h / 60%) % 2) - 1))
+      x = c * (1 -  abs(((h % 120%) / 60) - 1))
+
+      d = h % 120%
+      d = h - (clamp(0, ((h - 120) * 999) + 1, 1) + clamp(0, ((h - 240) * 999) + 1, 1) + clamp(0, ((h - 360) * 999) + 1, 1)) * 120
+      ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+      x = c * (1 -  abs((d / 60) - 1))
+      x = c * (1 -    [((d / 60) - 1) * clamp(-1, ((d / 60) - 1) * 999, 1)])
+      -----------------------------------------------------------------------
+
+      m = l - c / 2
+      -------------
+
+
+
+
+           if (300 <= h && h < 360) {         clamp(0, ((h - 300) * 999) + 1, 1)  *   clamp(0, (360 - h) * 999, 1)
+          r = c; g = 0; b = x;
+      }
+      else if (0 <= h   && h < 60)  {         clamp(0, ((h - 0) * 999) + 1, 1)    *   clamp(0, (60 - h) * 999, 1)
+          r = c; g = x; b = 0;
+      }
+
+      else if (60 <= h  && h < 120) {         clamp(0, ((h - 60) * 999) + 1, 1)   *   clamp(0, (120 - h) * 999, 1)
+          r = x; g = c; b = 0;
+      }
+      else if (120 <= h && h < 180) {         clamp(0, ((h - 120) * 999) + 1, 1)  *   clamp(0, (180 - h) * 999, 1)
+          r = 0; g = c; b = x;
+      }
+
+      else if (180 <= h && h < 240) {         clamp(0, ((h - 180) * 999) + 1, 1)  *   clamp(0, (240 - h) * 999, 1)
+          r = 0; g = x; b = c;
+      }
+      else if (240 <= h && h < 300) {         clamp(0, ((h - 240) * 999) + 1, 1)  *   clamp(0, (300 - h) * 999, 1)
+          r = x; g = 0; b = c;
+      }
+
+
+      r = m
+          +
+          (c * clamp(0, clamp(0, ((h - 300) * 999) + 1, 1) * clamp(0, (360 - h) * 999, 1) + clamp(0, ((h - 0) * 999) + 1, 1) * clamp(0, (60 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 60) * 999) + 1, 1) * clamp(0, (120 - h) * 999, 1) + clamp(0, ((h - 240) * 999) + 1, 1) * clamp(0, (300 - h) * 999, 1), 1))
+
+      g = m
+          +
+          (c * clamp(0, clamp(0, ((h - 60) * 999) + 1, 1) * clamp(0, (120 - h) * 999, 1) + clamp(0, ((h - 120) * 999) + 1, 1) * clamp(0, (180 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 0) * 999) + 1, 1) * clamp(0, (60 - h) * 999, 1) + clamp(0, ((h - 180) * 999) + 1, 1) * clamp(0, (240 - h) * 999, 1), 1))
+
+      b = m
+          +
+          (c * clamp(0, clamp(0, ((h - 180) * 999) + 1, 1) * clamp(0, (240 - h) * 999, 1) + clamp(0, ((h - 240) * 999) + 1, 1) * clamp(0, (300 - h) * 999, 1), 1))
+          +
+          (x * clamp(0, clamp(0, ((h - 300) * 999) + 1, 1) * clamp(0, (360 - h) * 999, 1) + clamp(0, ((h - 120) * 999) + 1, 1) * clamp(0, (180 - h) * 999, 1), 1))
+
+  */
+  /*
+      c: (1 - ((2*l - 1)*clamp(-1,(2*l - 1)*999,1)))*s;
+      d: h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120;
+
+      x: c*(1 - (((d/60) - 1)*clamp(-1,((d/60) - 1)*999,1)));
+      (with d) x: c*(1 - ((((h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120)/60) - 1)*clamp(-1,(((h - (clamp(0,((h - 120)*999) + 1,1) + clamp(0,((h - 240)*999) + 1,1) + clamp(0,((h - 360)*999) + 1,1))*120)/60) - 1)*999,1)));
+
+      m: l - c/2;
+      r: (m + (c*clamp(0,clamp(0,((h - 300)*999) + 1,1)*clamp(0,(360 - h)*999,1) + clamp(0,((h - 0)*999) + 1,1)*clamp(0,(60 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 60)*999) + 1,1)*clamp(0,(120 - h)*999,1) + clamp(0,((h - 240)*999) + 1,1)*clamp(0,(300 - h)*999,1),1)))*255;
+      g: (m + (c*clamp(0,clamp(0,((h - 60)*999) + 1,1)*clamp(0,(120 - h)*999,1) + clamp(0,((h - 120)*999) + 1,1)*clamp(0,(180 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 0)*999) + 1,1)*clamp(0,(60 - h)*999,1) + clamp(0,((h - 180)*999) + 1,1)*clamp(0,(240 - h)*999,1),1)))*255;
+      b: (m + (c*clamp(0,clamp(0,((h - 180)*999) + 1,1)*clamp(0,(240 - h)*999,1) + clamp(0,((h - 240)*999) + 1,1)*clamp(0,(300 - h)*999,1),1)) + (x*clamp(0,clamp(0,((h - 300)*999) + 1,1)*clamp(0,(360 - h)*999,1) + clamp(0,((h - 120)*999) + 1,1)*clamp(0,(180 - h)*999,1),1)))*255;
+  */
+  /*
+
+      --elm-backg-dark-c: string.unquote("calc((1 - ((2*var(--elm-backg-dark-l) - 1)*clamp(-1,(2*var(--elm-backg-dark-l) - 1)*999,1)))*var(--elm-backg-dark-s))");
+      --elm-backg-dark-x: string.unquote("calc(var(--elm-backg-dark-c)*(1 - ((((var(--elm-backg-dark-h) - (clamp(0,((var(--elm-backg-dark-h) - 120)*999) + 1,1) + clamp(0,((var(--elm-backg-dark-h) - 240)*999) + 1,1) + clamp(0,((var(--elm-backg-dark-h) - 360)*999) + 1,1))*120)/60) - 1)*clamp(-1,(((var(--elm-backg-dark-h) - (clamp(0,((var(--elm-backg-dark-h) - 120)*999) + 1,1) + clamp(0,((var(--elm-backg-dark-h) - 240)*999) + 1,1) + clamp(0,((var(--elm-backg-dark-h) - 360)*999) + 1,1))*120)/60) - 1)*999,1))))");
+
+      --elm-backg-dark-r: string.unquote("calc(((var(--elm-backg-dark-l) - var(--elm-backg-dark-c)/2) + (var(--elm-backg-dark-c)*clamp(0,clamp(0,((var(--elm-backg-dark-h) - 300)*999) + 1,1)*clamp(0,(360 - var(--elm-backg-dark-h))*999,1) + clamp(0,((var(--elm-backg-dark-h) - 0)*999) + 1,1)*clamp(0,(60 - var(--elm-backg-dark-h))*999,1),1)) + (var(--elm-backg-dark-x)*clamp(0,clamp(0,((var(--elm-backg-dark-h) - 60)*999) + 1,1)*clamp(0,(120 - var(--elm-backg-dark-h))*999,1) + clamp(0,((var(--elm-backg-dark-h) - 240)*999) + 1,1)*clamp(0,(300 - var(--elm-backg-dark-h))*999,1),1)))*255)");
+      --elm-backg-dark-g: string.unquote("calc(((var(--elm-backg-dark-l) - var(--elm-backg-dark-c)/2) + (var(--elm-backg-dark-c)*clamp(0,clamp(0,((var(--elm-backg-dark-h) - 60)*999) + 1,1)*clamp(0,(120 - var(--elm-backg-dark-h))*999,1) + clamp(0,((var(--elm-backg-dark-h) - 120)*999) + 1,1)*clamp(0,(180 - var(--elm-backg-dark-h))*999,1),1)) + (var(--elm-backg-dark-x)*clamp(0,clamp(0,((var(--elm-backg-dark-h) - 0)*999) + 1,1)*clamp(0,(60 - var(--elm-backg-dark-h))*999,1) + clamp(0,((var(--elm-backg-dark-h) - 180)*999) + 1,1)*clamp(0,(240 - var(--elm-backg-dark-h))*999,1),1)))*255)");
+      --elm-backg-dark-b: string.unquote("calc(((var(--elm-backg-dark-l) - var(--elm-backg-dark-c)/2) + (var(--elm-backg-dark-c)*clamp(0,clamp(0,((var(--elm-backg-dark-h) - 180)*999) + 1,1)*clamp(0,(240 - var(--elm-backg-dark-h))*999,1) + clamp(0,((var(--elm-backg-dark-h) - 240)*999) + 1,1)*clamp(0,(300 - var(--elm-backg-dark-h))*999,1),1)) + (var(--elm-backg-dark-x)*clamp(0,clamp(0,((var(--elm-backg-dark-h) - 300)*999) + 1,1)*clamp(0,(360 - var(--elm-backg-dark-h))*999,1) + clamp(0,((var(--elm-backg-dark-h) - 120)*999) + 1,1)*clamp(0,(180 - var(--elm-backg-dark-h))*999,1),1)))*255)");
+
+  */
+  --elm-color-dark-h:var(--elm-backg-dark-h);
+  --elm-color-dark-s:var(--elm-backg-dark-s);
+  --elm-color-dark-x:var(--elm-backg-dark-l) + (clamp(0, ((var(--elm-backg-dark-l) - 0.5) * 1000) + 1, 1) * var(--elm-backg-dark-s)) + (var(--elm-backg-dark-l) * var(--elm-backg-dark-s) * clamp(-1, ((var(--elm-backg-dark-l) - 0.5) * -1000) - 1, 1));
+  --elm-color-dark-l:clamp(0%, (var(--elm-backg-dark-l) - var(--col-contrast-threshold)) * -1000, 100%);
+  --elm-color-dark-a: 100%;
+  --elm-color-dark:hsla(var(--elm-color-dark-h), var(--elm-color-dark-s), var(--elm-color-dark-l), var(--elm-color-dark-a));
+}
+
+/* begin: animations */
+@keyframes elm-anim-none {}
+@keyframes elm-anim-hover {
+  0% {
+    filter: var(--elm-filter);
+  }
+  100% {
+    filter: var(--elm-filter) var(--elm-filter-hover);
+  }
+}
+@keyframes elm-anim-leave {
+  0% {
+    filter: var(--elm-filter) var(--elm-filter-hover);
+  }
+  100% {
+    filter: var(--elm-filter);
+  }
+}
+/* end: animations */
+/* begin: general style */
+.element {
+  background: var(--elm-backg-gradient), var(--elm-backg);
+  color: var(--elm-color);
+  font-size: var(--elm-font-size);
+  font-family: var(--elm-font-family);
+  font-weight: var(--elm-font-weight);
+  font-style: var(--elm-font-style);
+  text-decoration: var(--elm-text-decoration);
+  line-height: var(--elm-lineheight);
+  padding-left: var(--elm-padding-x);
+  padding-right: var(--elm-padding-x);
+  padding-top: var(--elm-padding-y);
+  padding-bottom: var(--elm-padding-y);
+  border: var(--elm-border);
+  border-radius: var(--elm-border-radius);
+  filter: var(--elm-filter);
+  --elm-anim-hover-leave:none;
+  animation: var(--elm-anim), var(--elm-anim-hover-leave);
+  /* begin: variant-size: font-size, padding, border-radius */
+  /* end: variant-size: font-size, padding, border-radius */
+  /* begin: variant-theme: background, color, border */
+  /* end: variant-theme: background, color, border */
+  /* begin: variant-state: animation */
+  /* end: variant-state: animation */
+}
+.element.sm {
+  font-size: var(--elm-font-size-sm);
+  padding-left: var(--elm-padding-x-sm);
+  padding-right: var(--elm-padding-x-sm);
+  padding-top: var(--elm-padding-y-sm);
+  padding-bottom: var(--elm-padding-y-sm);
+  border-radius: var(--elm-border-radius-sm);
+}
+.element.lg {
+  font-size: var(--elm-font-size-lg);
+  padding-left: var(--elm-padding-x-lg);
+  padding-right: var(--elm-padding-x-lg);
+  padding-top: var(--elm-padding-y-lg);
+  padding-bottom: var(--elm-padding-y-lg);
+  border-radius: var(--elm-border-radius-lg);
+}
+.element.primary {
+  --elm-backg-h:var(--elm-backg-primary-h);
+  --elm-backg-s:var(--elm-backg-primary-s);
+  --elm-backg-l:var(--elm-backg-primary-l);
+  --elm-backg-a:var(--elm-backg-primary-a);
+  --elm-backg:var(--elm-backg-primary);
+  --elm-color-h:var(--elm-color-primary-h);
+  --elm-color-s:var(--elm-color-primary-s);
+  --elm-color-l:var(--elm-color-primary-l);
+  --elm-color-a:var(--elm-color-primary-a);
+  --elm-color:hsla(var(--elm-color-h), var(--elm-color-s), var(--elm-color-l), var(--elm-color-a));
+}
+.element.secondary {
+  --elm-backg-h:var(--elm-backg-secondary-h);
+  --elm-backg-s:var(--elm-backg-secondary-s);
+  --elm-backg-l:var(--elm-backg-secondary-l);
+  --elm-backg-a:var(--elm-backg-secondary-a);
+  --elm-backg:var(--elm-backg-secondary);
+  --elm-color-h:var(--elm-color-secondary-h);
+  --elm-color-s:var(--elm-color-secondary-s);
+  --elm-color-l:var(--elm-color-secondary-l);
+  --elm-color-a:var(--elm-color-secondary-a);
+  --elm-color:hsla(var(--elm-color-h), var(--elm-color-s), var(--elm-color-l), var(--elm-color-a));
+}
+.element.success {
+  --elm-backg-h:var(--elm-backg-success-h);
+  --elm-backg-s:var(--elm-backg-success-s);
+  --elm-backg-l:var(--elm-backg-success-l);
+  --elm-backg-a:var(--elm-backg-success-a);
+  --elm-backg:var(--elm-backg-success);
+  --elm-color-h:var(--elm-color-success-h);
+  --elm-color-s:var(--elm-color-success-s);
+  --elm-color-l:var(--elm-color-success-l);
+  --elm-color-a:var(--elm-color-success-a);
+  --elm-color:hsla(var(--elm-color-h), var(--elm-color-s), var(--elm-color-l), var(--elm-color-a));
+}
+.element.info {
+  --elm-backg-h:var(--elm-backg-info-h);
+  --elm-backg-s:var(--elm-backg-info-s);
+  --elm-backg-l:var(--elm-backg-info-l);
+  --elm-backg-a:var(--elm-backg-info-a);
+  --elm-backg:var(--elm-backg-info);
+  --elm-color-h:var(--elm-color-info-h);
+  --elm-color-s:var(--elm-color-info-s);
+  --elm-color-l:var(--elm-color-info-l);
+  --elm-color-a:var(--elm-color-info-a);
+  --elm-color:hsla(var(--elm-color-h), var(--elm-color-s), var(--elm-color-l), var(--elm-color-a));
+}
+.element.warning {
+  --elm-backg-h:var(--elm-backg-warning-h);
+  --elm-backg-s:var(--elm-backg-warning-s);
+  --elm-backg-l:var(--elm-backg-warning-l);
+  --elm-backg-a:var(--elm-backg-warning-a);
+  --elm-backg:var(--elm-backg-warning);
+  --elm-color-h:var(--elm-color-warning-h);
+  --elm-color-s:var(--elm-color-warning-s);
+  --elm-color-l:var(--elm-color-warning-l);
+  --elm-color-a:var(--elm-color-warning-a);
+  --elm-color:hsla(var(--elm-color-h), var(--elm-color-s), var(--elm-color-l), var(--elm-color-a));
+}
+.element.danger {
+  --elm-backg-h:var(--elm-backg-danger-h);
+  --elm-backg-s:var(--elm-backg-danger-s);
+  --elm-backg-l:var(--elm-backg-danger-l);
+  --elm-backg-a:var(--elm-backg-danger-a);
+  --elm-backg:var(--elm-backg-danger);
+  --elm-color-h:var(--elm-color-danger-h);
+  --elm-color-s:var(--elm-color-danger-s);
+  --elm-color-l:var(--elm-color-danger-l);
+  --elm-color-a:var(--elm-color-danger-a);
+  --elm-color:hsla(var(--elm-color-h), var(--elm-color-s), var(--elm-color-l), var(--elm-color-a));
+}
+.element.light {
+  --elm-backg-h:var(--elm-backg-light-h);
+  --elm-backg-s:var(--elm-backg-light-s);
+  --elm-backg-l:var(--elm-backg-light-l);
+  --elm-backg-a:var(--elm-backg-light-a);
+  --elm-backg:var(--elm-backg-light);
+  --elm-color-h:var(--elm-color-light-h);
+  --elm-color-s:var(--elm-color-light-s);
+  --elm-color-l:var(--elm-color-light-l);
+  --elm-color-a:var(--elm-color-light-a);
+  --elm-color:hsla(var(--elm-color-h), var(--elm-color-s), var(--elm-color-l), var(--elm-color-a));
+}
+.element.dark {
+  --elm-backg-h:var(--elm-backg-dark-h);
+  --elm-backg-s:var(--elm-backg-dark-s);
+  --elm-backg-l:var(--elm-backg-dark-l);
+  --elm-backg-a:var(--elm-backg-dark-a);
+  --elm-backg:var(--elm-backg-dark);
+  --elm-color-h:var(--elm-color-dark-h);
+  --elm-color-s:var(--elm-color-dark-s);
+  --elm-color-l:var(--elm-color-dark-l);
+  --elm-color-a:var(--elm-color-dark-a);
+  --elm-color:hsla(var(--elm-color-h), var(--elm-color-s), var(--elm-color-l), var(--elm-color-a));
+}
+.element:hover, .element:focus {
+  --elm-anim-hover-leave:var(--elm-anim-hover);
+}
+.element:not(:hover):not(:focus).leave, .element:not(:hover):not(:focus).blur {
+  --elm-anim-hover-leave:var(--elm-anim-leave);
+}
+
+/* end: general style */

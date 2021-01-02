@@ -1,12 +1,22 @@
 import JqueryWrapper from "jquery-wrapper-class";
 
 
+
 /**
  * A base class for manipulating common HTML element
  */
 export default class Element extends JqueryWrapper {
     constructor(selector : Selector) {
         super(selector);
+    }
+
+
+
+    get markLeave() : boolean {
+        return this.is(".leave");
+    }
+    set markLeave(leave : boolean) {
+        this.toggleClass(".leave", leave);
     }
 
 
@@ -23,5 +33,4 @@ export default class Element extends JqueryWrapper {
 
     static window   = new Element(window);
     static document = new Element(document);
-    static body     = new Element(document.body);
 }
