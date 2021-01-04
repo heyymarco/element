@@ -1,6 +1,6 @@
 {
   "name": "@heymarco/element",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A base class for manipulating common HTML element",
   "main": "index.js",
   "scripts": {
@@ -16,10 +16,9 @@
   "license": "ISC",
   "dependencies": {
     "@heymarco/border": "^1.0.7",
-    "@heymarco/colors": "^1.0.11",
+    "@heymarco/colors": "^1.0.15",
     "@heymarco/sass-class-template": "^1.0.6",
     "@heymarco/sass-selector": "^1.0.5",
-    "@heymarco/sass-string": "^1.0.1",
     "@heymarco/spacer": "^1.0.6",
     "@heymarco/typography": "^1.0.10",
     "jquery-wrapper-class": "^1.0.13"
