@@ -58,7 +58,7 @@ $border-radius-sm   : var(#{border.$radius-cssvar}sm)       !default;
 $border-radius-lg   : var(#{border.$radius-cssvar}lg)       !default;
 
 $filter             : brightness(100%)                      !default;
-$filter-hover       : brightness(80%) contrast(150%)        !default;
+$filter-hover       : brightness(55%)                       !default;
 
 $anim               : #{$anim-prefix}none                   !default;
 $anim-hover         : 150ms ease-out both #{$anim-prefix}hover  !default;
@@ -204,8 +204,44 @@ $anim-leave         : 300ms ease-out both #{$anim-prefix}leave  !default;
 
 
 
+/* begin: states */
+$_state-hover: ":hover, :focus";
+$_state-leave: ".leave, .blur";
+@mixin state-hover {
+    @include selector.append(    $_state-hover) {
+        @content;
+    }
+}
+@mixin state-leave {
+    @include selector.append-not($_state-hover) { @include selector.append($_state-leave) {
+        @content;
+    }}
+}
+
+
+$_state-disabled: ":disabled";
+$_state-enabled : ".enabled";
+@mixin state-disabled {
+    @include selector.append(    $_state-disabled) {
+        @content;
+    }
+}
+@mixin state-not-disabled {
+    @include selector.append-not($_state-disabled) {
+        @content;
+    }
+}
+@mixin state-enabled {
+    @include selector.append-not($_state-disabled) { @include selector.append($_state-enabled) {
+        @content;
+    }}
+}
+/* end: states */
+
+
+
 /* begin: general style */
-@mixin _style($include) {
+@mixin _style($include, $cssvar: $cssvar) {
     // @if ($include) { @include  base.style; }
     // @else          { @extend #{base.$alias} !optional; }
 
@@ -231,9 +267,6 @@ $anim-leave         : 300ms ease-out both #{$anim-prefix}leave  !default;
 
     filter          : var(#{$cssvar}filter);
 
-    #{$cssvar}anim-hover-leave  : none;
-    animation       : var(#{$cssvar}anim), var(#{$cssvar}anim-hover-leave);
-
 
     
     /* begin: variant-size: font-size, padding, border-radius */
@@ -257,27 +290,44 @@ $anim-leave         : 300ms ease-out both #{$anim-prefix}leave  !default;
         #{$cssvar}backg-s       : var(#{$cssvar}backg-#{$theme-name}-s);
         #{$cssvar}backg-l       : var(#{$cssvar}backg-#{$theme-name}-l);
         #{$cssvar}backg-a       : var(#{$cssvar}backg-#{$theme-name}-a);
-        #{$cssvar}backg         : #{color.cssvar-hsla($cssvar: $cssvar, $name: "backg", $suffix: "")};
+
+        // #{$cssvar}backg-c       : var(#{$cssvar}backg-#{$theme-name}-c);
+        // #{$cssvar}backg-x       : var(#{$cssvar}backg-#{$theme-name}-x);
+        // #{$cssvar}backg-r       : var(#{$cssvar}backg-#{$theme-name}-r);
+        // #{$cssvar}backg-g       : var(#{$cssvar}backg-#{$theme-name}-g);
+        // #{$cssvar}backg-b       : var(#{$cssvar}backg-#{$theme-name}-b);
+
+        #{$cssvar}backg-u       : var(#{$cssvar}backg-#{$theme-name}-u);
+
+        #{$cssvar}backg         : var(#{$cssvar}backg-#{$theme-name});
+
+
 
         #{$cssvar}color-h       : var(#{$cssvar}color-#{$theme-name}-h);
         #{$cssvar}color-s       : var(#{$cssvar}color-#{$theme-name}-s);
         #{$cssvar}color-l       : var(#{$cssvar}color-#{$theme-name}-l);
         #{$cssvar}color-a       : var(#{$cssvar}color-#{$theme-name}-a);
-        #{$cssvar}color         : #{color.cssvar-hsla($cssvar: $cssvar, $name: "color", $suffix: "")};
+
+        #{$cssvar}color         : var(#{$cssvar}color-#{$theme-name});
     }}
     /* end: variant-theme: background, color, border */
 
 
 
     /* begin: variant-state: animation */
-    $_state-hover: ":hover, :focus";
-    $_state-leave: ".leave, .blur";
-    @include selector.append(    $_state-hover) {                                           #{$cssvar}anim-hover-leave: var(#{$cssvar}anim-hover);    }
-    @include selector.append-not($_state-hover) { @include selector.append($_state-leave) { #{$cssvar}anim-hover-leave: var(#{$cssvar}anim-leave);   }}
+    #{$cssvar}anim-hover-leave  : none;
+    @include state-not-disabled {
+        @include state-hover { #{$cssvar}anim-hover-leave: var(#{$cssvar}anim-hover); }
+        @include state-leave { #{$cssvar}anim-hover-leave: var(#{$cssvar}anim-leave); }
+    }
+
+
+
+    animation: var(#{$cssvar}anim), var(#{$cssvar}anim-hover-leave);
     /* end: variant-state: animation */
 }
-@mixin style {
-    @include _style(true);
+@mixin style($cssvar: $cssvar) {
+    @include _style(true, $cssvar);
 }
 @include alias($alias) {
     @include _style(false);
