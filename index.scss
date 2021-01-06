@@ -30,7 +30,6 @@ $var-root           : ":root"                               !default;
 $var-prefix         : "elm"                                 !default;
 $var-prefix-base    : ""                                    !default;
 $cssvar: make-cssvar($var-prefix, $var-prefix-base);
-$anim-prefix: part-combine($var-prefix, "anim-");
 
 $backg              : rgba(255, 255, 255, 0)                  !default; // transp white, so the foreg color will be black
 $backg-gradient     : linear-gradient(180deg, rgba(color.$white, 0.15), rgba(color.$white, 0)) border-box !default;
@@ -62,9 +61,9 @@ $box-shadow         : 0px 0px transparent                       !default;
 $filter             : brightness(100%)                          !default;
 $filter-hover       : brightness(85%)                           !default;
 
-$anim               : #{$anim-prefix}none                       !default;
-$anim-hover         : 150ms ease-out both #{$anim-prefix}hover  !default;
-$anim-leave         : 300ms ease-out both #{$anim-prefix}leave  !default;
+$anim               : #{$cssvar}anim-none                       !default;
+$anim-hover         : 150ms ease-out both #{$cssvar}anim-hover  !default;
+$anim-leave         : 300ms ease-out both #{$cssvar}anim-leave  !default;
 
 
 
@@ -183,37 +182,7 @@ $anim-leave         : 300ms ease-out both #{$anim-prefix}leave  !default;
 
 
 /* begin: animations */
-@keyframes #{$anim-prefix}none { }
-
-@keyframes #{$anim-prefix}hover {
-    0% {
-        filter:
-            var(#{$cssvar}filter)
-            ;
-    }
-
-    100% {
-        filter:
-            var(#{$cssvar}filter)
-            var(#{$cssvar}filter-hover)
-            ;
-    }
-}
-
-@keyframes #{$anim-prefix}leave {
-    0% {
-        filter:
-            var(#{$cssvar}filter)
-            var(#{$cssvar}filter-hover)
-            ;
-    }
-
-    100% {
-        filter:
-            var(#{$cssvar}filter)
-            ;
-    }
-}
+@keyframes #{$cssvar}anim-none { }
 /* end: animations */
 
 
@@ -350,6 +319,37 @@ $_state-enabled : ".enabled";
     @include state-not-disabled {
         @include state-hover { #{$cssvar}anim-hover-leave: var(#{$cssvar}anim-hover); }
         @include state-leave { #{$cssvar}anim-hover-leave: var(#{$cssvar}anim-leave); }
+    }
+    @at-root {
+        @keyframes #{$cssvar}anim-hover {
+            0% {
+                filter:
+                    var(#{$cssvar}filter)
+                    ;
+            }
+        
+            100% {
+                filter:
+                    var(#{$cssvar}filter)
+                    var(#{$cssvar}filter-hover)
+                    ;
+            }
+        }
+        
+        @keyframes #{$cssvar}anim-leave {
+            0% {
+                filter:
+                    var(#{$cssvar}filter)
+                    var(#{$cssvar}filter-hover)
+                    ;
+            }
+        
+            100% {
+                filter:
+                    var(#{$cssvar}filter)
+                    ;
+            }
+        }
     }
 
 
