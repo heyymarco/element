@@ -4,19 +4,19 @@
 
 // development:
 // @use "node_modules/@heymarco/sass-class-template/index" as *;
-// @use "node_modules/@heymarco/sass-selector/index" as selector;
-// @use "node_modules/@heymarco/border/index" as border;
-// @use "node_modules/@heymarco/spacer/index" as spacer;
-// @use "node_modules/@heymarco/typography/index" as typo;
-// @use "node_modules/@heymarco/colors/index" as color;
+// @use "node_modules/@heymarco/sass-selector/index"       as selector;
+// @use "node_modules/@heymarco/border/index"              as border;
+// @use "node_modules/@heymarco/spacer/index"              as spacer;
+// @use "node_modules/@heymarco/typography/index"          as typo;
+// @use "node_modules/@heymarco/colors/index"              as color;
 
 // production:
 @use "../../../node_modules/@heymarco/sass-class-template/index" as *;
-@use "../../../node_modules/@heymarco/sass-selector/index" as selector;
-@use "../../../node_modules/@heymarco/border/index" as border;
-@use "../../../node_modules/@heymarco/spacer/index" as spacer;
-@use "../../../node_modules/@heymarco/typography/index" as typo;
-@use "../../../node_modules/@heymarco/colors/index" as color;
+@use "../../../node_modules/@heymarco/sass-selector/index"       as selector;
+@use "../../../node_modules/@heymarco/border/index"              as border;
+@use "../../../node_modules/@heymarco/spacer/index"              as spacer;
+@use "../../../node_modules/@heymarco/typography/index"          as typo;
+@use "../../../node_modules/@heymarco/colors/index"              as color;
 
 
 
@@ -32,35 +32,37 @@ $var-prefix-base    : ""                                    !default;
 $cssvar: make-cssvar($var-prefix, $var-prefix-base);
 $anim-prefix: part-combine($var-prefix, "anim-");
 
-$backg              : rgba(255, 255, 255, 0)                !default; // transp white, so the foreg color will be black
+$backg              : rgba(255, 255, 255, 0)                  !default; // transp white, so the foreg color will be black
 $backg-gradient     : linear-gradient(180deg, rgba(color.$white, 0.15), rgba(color.$white, 0)) border-box !default;
-$color              : contrast                              !default;
+$color              : contrast                                  !default;
 
-$font-size          : var(#{typo.$cssvar}font-size-default) !default;
+$font-size          : var(#{typo.$cssvar}font-size-default)     !default;
 $font-size-sm       : calc((var(#{typo.$cssvar}font-size-nm) + var(#{typo.$cssvar}font-size-sm)) / 2) !default;
-$font-size-lg       : var(#{typo.$cssvar}font-size-md)      !default;
-$font-family        : unset                                 !default;
-$font-weight        : unset                                 !default;
-$font-style         : unset                                 !default;
-$text-decoration    : unset                                 !default;
-$lineheight         : unset                                 !default;
+$font-size-lg       : var(#{typo.$cssvar}font-size-md)          !default;
+$font-family        : unset                                     !default;
+$font-weight        : unset                                     !default;
+$font-style         : unset                                     !default;
+$text-decoration    : unset                                     !default;
+$lineheight         : unset                                     !default;
 
 $padding-x          : calc((var(#{spacer.$cssvar}sm) + var(#{spacer.$cssvar}md)) / 2) !default;
 $padding-y          : calc((var(#{spacer.$cssvar}xs) + var(#{spacer.$cssvar}sm)) / 2) !default;
-$padding-x-sm       : var(#{spacer.$cssvar}sm)              !default;
-$padding-y-sm       : var(#{spacer.$cssvar}xs)              !default;
-$padding-x-lg       : var(#{spacer.$cssvar}md)              !default;
-$padding-y-lg       : var(#{spacer.$cssvar}sm)              !default;
+$padding-x-sm       : var(#{spacer.$cssvar}sm)                  !default;
+$padding-y-sm       : var(#{spacer.$cssvar}xs)                  !default;
+$padding-x-lg       : var(#{spacer.$cssvar}md)                  !default;
+$padding-y-lg       : var(#{spacer.$cssvar}sm)                  !default;
 
 $border             : var(#{border.$cssvar}default) var(#{border.$cssvar}style) var(#{border.$cssvar}color) !default;
-$border-radius      : var(#{border.$radius-cssvar}default)  !default;
-$border-radius-sm   : var(#{border.$radius-cssvar}sm)       !default;
-$border-radius-lg   : var(#{border.$radius-cssvar}lg)       !default;
+$border-radius      : var(#{border.$radius-cssvar}default)      !default;
+$border-radius-sm   : var(#{border.$radius-cssvar}sm)           !default;
+$border-radius-lg   : var(#{border.$radius-cssvar}lg)           !default;
 
-$filter             : brightness(100%)                      !default;
-$filter-hover       : brightness(55%)                       !default;
+$box-shadow         : 0px 0px transparent                       !default;
 
-$anim               : #{$anim-prefix}none                   !default;
+$filter             : brightness(100%)                          !default;
+$filter-hover       : brightness(85%)                           !default;
+
+$anim               : #{$anim-prefix}none                       !default;
 $anim-hover         : 150ms ease-out both #{$anim-prefix}hover  !default;
 $anim-leave         : 300ms ease-out both #{$anim-prefix}leave  !default;
 
@@ -130,6 +132,8 @@ $anim-leave         : 300ms ease-out both #{$anim-prefix}leave  !default;
     #{$cssvar}border-radius-sm  : $border-radius-sm;
     #{$cssvar}border-radius-lg  : $border-radius-lg;
 
+    #{$cssvar}box-shadow        : $box-shadow;
+
     #{$cssvar}filter            : $filter;
     #{$cssvar}filter-hover      : $filter-hover;
 
@@ -183,21 +187,31 @@ $anim-leave         : 300ms ease-out both #{$anim-prefix}leave  !default;
 
 @keyframes #{$anim-prefix}hover {
     0% {
-        filter  : var(#{$cssvar}filter);
+        filter:
+            var(#{$cssvar}filter)
+            ;
     }
 
     100% {
-        filter  : var(#{$cssvar}filter) var(#{$cssvar}filter-hover);
+        filter:
+            var(#{$cssvar}filter)
+            var(#{$cssvar}filter-hover)
+            ;
     }
 }
 
 @keyframes #{$anim-prefix}leave {
     0% {
-        filter  : var(#{$cssvar}filter) var(#{$cssvar}filter-hover);
+        filter:
+            var(#{$cssvar}filter)
+            var(#{$cssvar}filter-hover)
+            ;
     }
 
     100% {
-        filter  : var(#{$cssvar}filter);
+        filter:
+            var(#{$cssvar}filter)
+            ;
     }
 }
 /* end: animations */
@@ -212,14 +226,24 @@ $_state-leave: ".leave, .blur";
         @content;
     }
 }
+@mixin state-not-hover {
+    @include selector.append-not($_state-hover) {
+        @content;
+    }
+}
 @mixin state-leave {
-    @include selector.append-not($_state-hover) { @include selector.append($_state-leave) {
+    @include state-not-hover { @include selector.append($_state-leave) {
         @content;
     }}
 }
+@mixin state-not-leave {
+    @include selector.append-not($_state-leave) {
+        @content;
+    }
+}
 
 
-$_state-disabled: ":disabled";
+$_state-disabled: ":disabled, .disabled";
 $_state-enabled : ".enabled";
 @mixin state-disabled {
     @include selector.append(    $_state-disabled) {
@@ -232,9 +256,14 @@ $_state-enabled : ".enabled";
     }
 }
 @mixin state-enabled {
-    @include selector.append-not($_state-disabled) { @include selector.append($_state-enabled) {
+    @include state-not-disabled { @include selector.append($_state-enabled) {
         @content;
     }}
+}
+@mixin state-not-enabled {
+    @include selector.append-not($_state-enabled) {
+        @content;
+    }
 }
 /* end: states */
 
@@ -265,6 +294,8 @@ $_state-enabled : ".enabled";
     border          : var(#{$cssvar}border);
     border-radius   : var(#{$cssvar}border-radius);
 
+    box-shadow      : var(#{$cssvar}box-shadow);
+
     filter          : var(#{$cssvar}filter);
 
 
@@ -284,7 +315,7 @@ $_state-enabled : ".enabled";
 
 
     
-    /* begin: variant-theme: background, color, border */
+    /* begin: variant-theme: backg, color */
     @each $theme-name, $theme-color in color.$themes { @include selector.append("." + $theme-name) {
         #{$cssvar}backg-h       : var(#{$cssvar}backg-#{$theme-name}-h);
         #{$cssvar}backg-s       : var(#{$cssvar}backg-#{$theme-name}-s);
@@ -310,7 +341,7 @@ $_state-enabled : ".enabled";
 
         #{$cssvar}color         : var(#{$cssvar}color-#{$theme-name});
     }}
-    /* end: variant-theme: background, color, border */
+    /* end: variant-theme: backg, color */
 
 
 
@@ -323,7 +354,9 @@ $_state-enabled : ".enabled";
 
 
 
-    animation: var(#{$cssvar}anim), var(#{$cssvar}anim-hover-leave);
+    animation:
+        var(#{$cssvar}anim),
+        var(#{$cssvar}anim-hover-leave);
     /* end: variant-state: animation */
 }
 @mixin style($cssvar: $cssvar) {
