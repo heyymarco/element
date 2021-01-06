@@ -16,7 +16,7 @@ export default class Element extends JqueryWrapper {
         return this.is(".leave");
     }
     set markLeave(leave : boolean) {
-        this.toggleClass(".leave", leave);
+        this.toggleClass("leave", leave);
     }
 
 
