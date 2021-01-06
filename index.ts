@@ -21,6 +21,12 @@ export default class Element extends JqueryWrapper {
 
 
 
+    clearAnimMarkOuts() {
+        this.markLeave = false;
+    }
+
+
+
     /**
      * Registers a function to be executed during page's startup.
      * @param handler The function to be executed during page's startup.
