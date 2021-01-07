@@ -58,6 +58,10 @@ $border-radius-lg   : var(#{border.$radius-cssvar}lg)           !default;
 
 $box-shadow         : 0px 0px transparent                       !default;
 
+$transition         : background 300ms ease-out,
+                      color      300ms ease-out,
+                      border     300ms ease-out                 !default;
+
 $filter             : brightness(100%)                          !default;
 $filter-hover       : brightness(85%)                           !default;
 
@@ -132,6 +136,8 @@ $anim-leave         : 300ms ease-out both #{$cssvar}anim-leave  !default;
     #{$cssvar}border-radius-lg  : $border-radius-lg;
 
     #{$cssvar}box-shadow        : $box-shadow;
+
+    #{$cssvar}transition        : $transition;
 
     #{$cssvar}filter            : $filter;
     #{$cssvar}filter-hover      : $filter-hover;
@@ -264,6 +270,8 @@ $_state-enabled : ".enabled";
     border-radius   : var(#{$cssvar}border-radius);
 
     box-shadow      : var(#{$cssvar}box-shadow);
+
+    transition      : var(#{$cssvar}transition);
 
     filter          : var(#{$cssvar}filter);
 
