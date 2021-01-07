@@ -1,6 +1,6 @@
 {
   "name": "@heymarco/element",
-  "version": "1.0.10",
+  "version": "1.0.11",
   "description": "A base class for manipulating common HTML element",
   "main": "index.js",
   "scripts": {

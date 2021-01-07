@@ -38,11 +38,11 @@ $color              : contrast                                  !default;
 $font-size          : var(#{typo.$cssvar}font-size-default)     !default;
 $font-size-sm       : calc((var(#{typo.$cssvar}font-size-nm) + var(#{typo.$cssvar}font-size-sm)) / 2) !default;
 $font-size-lg       : var(#{typo.$cssvar}font-size-md)          !default;
-$font-family        : unset                                     !default;
-$font-weight        : unset                                     !default;
-$font-style         : unset                                     !default;
-$text-decoration    : unset                                     !default;
-$lineheight         : unset                                     !default;
+$font-family        : var(#{typo.$cssvar}font-family)           !default;
+$font-weight        : var(#{typo.$cssvar}font-weight)           !default;
+$font-style         : var(#{typo.$cssvar}font-style)            !default;
+$text-decoration    : var(#{typo.$cssvar}text-decoration)       !default;
+$lineheight         : var(#{typo.$cssvar}lineheight)            !default;
 
 $padding-x          : calc((var(#{spacer.$cssvar}sm) + var(#{spacer.$cssvar}md)) / 2) !default;
 $padding-y          : calc((var(#{spacer.$cssvar}xs) + var(#{spacer.$cssvar}sm)) / 2) !default;
