@@ -278,7 +278,7 @@ $_state-enabled : ".enabled";
 
     
     /* begin: variant-size: font-size, padding, border-radius */
-    @each $size in (sm, lg) { @include selector.append("." + $size) {
+    @each $size in (sm, lg) { @include variant-of($alias, $size) {
         font-size       : var(#{$cssvar}font-size-#{$size});
 
         padding-left    : var(#{$cssvar}padding-x-#{$size});
@@ -293,7 +293,7 @@ $_state-enabled : ".enabled";
 
     
     /* begin: variant-theme: backg, color */
-    @each $theme-name, $theme-color in color.$themes { @include selector.append("." + $theme-name) {
+    @each $theme-name, $theme-color in color.$themes { @include variant-of($alias, $theme-name) {
         #{$cssvar}backg-h       : var(#{$cssvar}backg-#{$theme-name}-h);
         #{$cssvar}backg-s       : var(#{$cssvar}backg-#{$theme-name}-s);
         #{$cssvar}backg-l       : var(#{$cssvar}backg-#{$theme-name}-l);
@@ -322,7 +322,7 @@ $_state-enabled : ".enabled";
 
 
 
-    /* begin: variant-state: animation */
+    /* begin: states: animation */
     #{$cssvar}anim-hover-leave  : none;
     @include state-not-disabled {
         @include state-hover { #{$cssvar}anim-hover-leave: var(#{$cssvar}anim-hover); }
@@ -365,7 +365,7 @@ $_state-enabled : ".enabled";
     animation:
         var(#{$cssvar}anim),
         var(#{$cssvar}anim-hover-leave);
-    /* end: variant-state: animation */
+    /* end: states: animation */
 }
 @mixin style($cssvar: $cssvar) {
     @include _style(true, $cssvar);
